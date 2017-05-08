@@ -1,0 +1,14 @@
+/*
+* @Author: Administrator
+* @Date:   2017-05-08 21:39:43
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-05-08 21:46:50
+*/
+p{
+	width: 200px;
+	height: 200px;
+	line-height: 200px;
+	text-align: center;
+	border-radius:50%;
+	background-color: yellow;
+}
