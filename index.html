@@ -1,18 +1,270 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<title></title>
-       <link rel="stylesheet" type="text/css" href="css/main.css">
-       <style type="text/css">
-       	
-       </style>
+		<meta charset="utf-8" />
+		<title>花事的个人主页</title>
+		<!--设置视口-->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!--导入文件-->
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="css/index.css" />
 	</head>
 	<body>
-	 	<p>change color</p>
-	 	<hr>
-	 	<!-- 二级页面链接测试 -->
-	 	<a href="http:/huashi718.github.io/demo">我是二级页面</a>
-	 	<script src="js/main.js"></script>
+		<!--响应式导航栏-->
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+		            <span class="sr-only">切换导航</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		       </button>
+				<a class="navbar-brand" href="#">Huashi的博客<img src="img/t019355d63981ad70aa.png" alt="" /></a>
+			</div>
+			<div class="collapse navbar-collapse" id="example-navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active ">
+						<a href="#">个人首页</a>
+					</li>
+					<li>
+						<a href="#">关于我</a>
+					</li>
+					<li>
+						<a href="#">慢生活</a>
+					</li>
+					<li>
+						<a href="#">碎言碎语</a>
+					</li>
+					<li>
+						<a href="#">学无止境</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		</nav>
+		<!--内容部分-->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 left-aside">
+					<div class="myphoto">
+						<div class="my_photo">
+							<div class="shadow">
+							</div>
+						</div>
+					</div>
+					<div class="mymanifesto">
+						<h4>不积跬步，无以至千里</h4>
+						<p>业精于勤，荒于嬉；行成于思，毁于随</p>
+					</div>
+					<div class="myInfo">
+						<p>爱技术，爱生活</p>
+						<p>所在城市：北京</p>
+						<p>E-mail :huting1819@163.com</p>
+					</div>
+					<div class="mylabel-top">
+						<b>我的标签</b>
+					</div>
+					<div class="mylabel-content">
+						<span class="label label-success">html/css</span>
+						<span class="label label-warning">javascript</span>
+						<span class="label label-primary">Ajax</span>
+						<span class="label label-danger">jsonp</span>
+						<span class="label label-info">jQuery</span>
+						<span class="label label-danger">bootstrap</span>
+						<span class="label label-success">MUI</span>
+						<span class="label label-warning">react</span>
+						<span class="label label-primary">Angular</span>
+						<span class="label label-warning">Nodejs</span>
+					</div>
+					<div class="mylabel-top">
+						<b>小型demo</b>
+					</div>
+					<div class="mylabel-content">
+						<a href="http:/huashi718.github.io/demo/">
+							<div class="little_demo">
+								<img src="img/2017-05-13_222023.png" alt="" />
+							</div>
+						</a>
+						<a href="http:/huashi718.github.io/demo/">
+							<div class="little_demo">
+								<img src="img/2017-05-13_222023.png" alt="" />
+							</div>
+						</a>
+					</div>
+					<!--<div class="mymanifesto">
+						<p>我相信这是一个通过百倍努力就能自由遨游的时代，而互联网行业就是
+						我的星辰大海</p>
+					</div>-->
+					
+				</div>
+				<div class="col-md-9 right-aside">
+					<a href="http:/huashi718.github.io/demo/">
+						<div class="panel panel-warning">
+							<div class="panel-heading">
+								<h4>
+									个人简历
+									<span class="label label-warning">响应式</span>
+								</h4>
+							</div>
+							<div class="panel panel-body ">
+								<div class="col-md-4 demophoto">
+									<img src="img/2017-05-13_184324.png"/>
+								</div>
+								<div class="col-md-8">
+									<p class="domeinfo">
+										H5和CSS3新特性使得我们能够借助它们来完成更加炫酷的效果，让我们的页面渲染更加生动。
+										而css3实现的动态简历更能吸引人的眼球，作为web前端工程师，必须挑战它。
+									</p>
+									<p class="domeinfo">
+										考虑到移动端的适配，仍然是采用bootstrap响应式布局，以适应不同大小
+										的屏幕。整站滚屏导航效果借助fullPage实现，动画效果借助了animate.css。
+									</p>
+									<h4>
+										<span class="label label-success">css3</span>
+										<span class="label label-warning">fullPage</span>
+										<span class="label label-primary">animate</span>
+										<span class="label label-danger">hover</span>
+										<span class="label label-danger">bootstrap</span>
+										<span class="label label-info">智能滚屏</span>
+										<span class="label label-success">侧边导航</span>
+										<span class="label label-warning">javascript</span>
+									</h4>
+								</div>
+							</div>
+						</div>
+					</a>
+					<a href="http:/huashi718.github.io/demo/">
+						<div class="panel panel-warning">
+							<div class="panel-heading">
+								<h4>
+									传祺GS8全景展示
+									<span class="label label-warning">响应式</span>
+									<span class="label label-warning">360旋转展示</span>
+								</h4>
+							</div>
+							<div class="panel panel-body ">
+								<div class="col-md-4 demophoto">
+									<img src="img/2017-05-13_192751.png"/>
+								</div>
+								<div class="col-md-8">
+									<p class="domeinfo">
+										360度展现传祺GS8，如果以此作为物品网页展示效果，相信对于商家用户来说，都是
+										赏心悦目的体验。
+									</p>
+									<p class="domeinfo">
+										本demo中，我通过css3旋转和平移构建立体视觉感，配合拖拽，实现360度旋转全景观看传祺GS8。
+									</p>
+									<h4>
+										<span class="label label-success">css3</span>
+										<span class="label label-warning">javascript</span>
+										<span class="label label-primary">全景拖拽</span>
+										<span class="label label-danger">bootstrap</span>
+										<span class="label label-warning">jQuery</span>
+									</h4>
+								</div>
+							</div>
+						</div>
+					</a>
+					<a href="http://www.senchaowang.com/">
+						<div class="panel panel-warning">
+							<div class="panel-heading">
+								<h4>
+									森巢家居网
+									<span class="label label-warning">PC端</span>
+								</h4>
+							</div>
+							<div class="panel panel-body ">
+								<div class="col-md-4 demophoto">
+									<img src="img/2017-05-13_211045.png"/>
+								</div>
+								<div class="col-md-8">
+									<p class="domeinfo">
+										电商网站是每个前端都非常熟悉的网站，复杂的布局中蕴藏着模块化设计的优良
+										思想。规划化的命名便于我们之后的维护，改版和优化。
+									</p>
+									<p class="domeinfo">
+										该项目，主要从模块化布局切入，模块从大到小，css由外向内，整站多处遮罩
+										效果采用hover实现，再加入一些js交互,例如城市的选择等。多处相同的点击事件通过事件
+										委托来完成。封装常用的方法，直接调用，减少代码重复。
+									</p>
+									<h4>
+										<span class="label label-success">html</span>
+										<span class="label label-success">css</span>
+										<span class="label label-warning">javascript</span>
+										<span class="label label-warning">jQuery</span>
+										<span class="label label-primary">hover</span>
+										<span class="label label-danger">bootstrap</span>
+										<span class="label label-warning">ajax</span>
+										<span class="label label-warning">轮播图</span>
+										<span class="label label-warning">语义化</span>
+									</h4>
+								</div>
+							</div>
+						</div>
+					</a>
+					<a href="http:/huashi718.github.io/demo/">
+						<div class="panel panel-warning">
+							<div class="panel-heading">
+								<h4>
+									森巢家居网
+									<span class="label label-warning">移动端</span>
+								</h4>
+							</div>
+							<div class="panel panel-body ">
+								<div class="col-md-4 demophoto">
+									<img src="img/2017-05-13_195855.png"/>
+								</div>
+								<div class="col-md-8">
+									<p class="domeinfo">
+										现在的大型电商网站都会配备移动端页面，
+										近期实战了一些移动端的项目。相较于PC端来说，个人认为移动端布局相对容易，
+										样式复用性更强一些。
+									</p>
+									<p class="domeinfo">
+										该项目采用百分比和px进行布局。页面多处图标，采用css雪碧图。为了对SEO
+										友好，采用h5新增的语义标签，通过swiper实现智能轮播。
+									</p>
+									<h4>
+										<span class="label label-success">H5</span>
+										<span class="label label-success">css3</span>
+										<span class="label label-warning">javascript</span>
+										<span class="label label-warning">语义化</span>
+										<span class="label label-primary">百分比</span>
+										<span class="label label-primary">css精灵</span>
+										<span class="label label-danger">bootstrap</span>
+										<span class="label label-warning">jQuery</span>
+										<span class="label label-warning">Ajax</span>
+									</h4>
+								</div>
+							</div>
+						</div>
+					</a>
+					<div class="about-me">
+						<img src="img/psb.jpg"/>
+						<div class="fr word">
+							<span>花事</span><br />
+							<span>性别：女  &nbsp;年龄：25岁</span><br />
+							<span>现居：北京</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="container-fluid">
+			<div class="row footer">
+			<h4>我相信这是一个通过百倍努力就能自由遨游的时代，而互联网行业就是
+				我的星辰大海
+			</h4>
+			<p>&copy; design by Huting &hearts;</p>
+			</div>
+		</div>
 	</body>
 </html>
+
+
+
+		

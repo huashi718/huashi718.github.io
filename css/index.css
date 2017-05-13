@@ -1,0 +1,180 @@
+body{
+	background: #ddd6cc;
+}
+a:hover{
+	text-decoration: none;
+	opacity: 0.6;
+	color: red;
+}
+/*导航栏*/
+.navbar{
+	background: #fff;
+}
+.navbar-brand{
+	position: relative;
+	margin-right:50px;
+}
+.navbar-header img{
+	width: 22%;
+	position:absolute;
+	top:9px;
+	left:128px;
+}
+.navbar-nav>li.active>a{
+	background-color:#f16e50 !important ;
+	color:#fff !important;
+	transform: skew(-20deg);
+	-ms-transform: skew(-20deg);
+	-moz-transform: skew(-20deg);
+	-webkit-transform: skew(-20deg);
+	-o-transform: skew(-20deg);
+}
+.navbar-nav>li>a:hover{
+	background-color:#f16e50 !important ;
+	color:#fff !important;
+	transform: skew(-20deg);
+	-ms-transform: skew(-20deg);
+	-moz-transform: skew(-20deg);
+	-webkit-transform: skew(-20deg);
+	-o-transform: skew(-20deg);
+}
+
+/*左边侧边栏*/
+.left-aside{
+	background: #e8e5dd;
+	
+}
+
+.myphoto{
+	text-align: center;
+	height: 200px;
+	background: #e8e5dd;
+	box-sizing: border-box;
+	position: relative;
+	padding-top:20px;
+	
+}
+
+.my_photo{
+	width:160px;
+	height: 160px;
+	border-radius: 100%;
+	background: url(../img/psb.jpg) no-repeat;
+	background-size:100% ;
+	margin:auto;
+}
+.myphoto>.shadoe{
+	
+}
+.myphoto>.shadow{
+	width: 100%;
+	height:30%;
+	background: rgba(0,0,0);
+}
+.mymanifesto{
+	height: 135px;
+	color:#fff;
+	background-color:#f16e50;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top:40px ;
+	box-sizing: border-box;
+}
+.myInfo,.mylabel-content{
+	padding: 20px;
+	background: #e8e5dd;
+	overflow: hidden;
+}
+.mylabel-top{
+	background-color:#f16e50;
+	color:#fff;
+	padding: 10px 20px;
+	font-size: 15px;
+}
+/*.mylabel-top>b{
+	-webkit-transition: all 0.4s ease;
+}
+.mylabel-top>b:hover{
+	-webkit-transform: rotate(360deg);
+}*/
+.label{
+	line-height: 2;
+}
+/*.mylabel-content>span:hover{
+	transform: rotate(360deg) !important;
+}*/
+
+.little_demo{
+	width: 46%;
+	float: left;
+	margin-right: 2%;
+}
+.little_demo>img{
+	width: 100%;
+	border-radius:100% ;
+}
+/*demo放大*/
+/*.mylabel-content>a:hover .mylabel-content>a>div>img{
+	animation:move-big  5s linear  0s 1;
+}
+@keyframes move-big{
+	from{transform:scale(0,0);}
+	to{transform:scale(1.5,1.5);}
+}*/
+
+
+
+
+/*右边侧边栏*/
+.demophoto>img{
+	width:100%;
+	height:100%;
+	transition: all 0.2s linear;
+}
+.panel{
+	border: none;
+}
+.panel .domeinfo{
+	font-size:15px;
+}
+.panel-body h4{
+	margin-top:50px;
+}
+a:hover .demophoto>img{
+	opacity: 0.7;
+}
+.right-aside{
+	position: relative;
+}
+.about-me{
+	width: 260px;
+	position: absolute;
+	bottom:-95px;
+	color:#666;
+	
+}
+.about-me>img{
+	width:105px;
+	height:110px;
+	border: 3px solid #f16e50;
+}
+.word{
+	position: absolute;
+	left:110px;
+	bottom:5px;
+}
+/*底部*/
+.fr{
+	float: right;
+}
+.footer{
+	margin-top: 20px;
+	height: 200px;
+	text-align: center;
+	background:#242221;
+	color:#999;
+	box-sizing: border-box;
+	padding-top: 100px;
+	border-top:5px solid #f16e50;
+}
+
