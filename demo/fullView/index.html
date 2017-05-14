@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>360全景图片</title>
+		<style type="text/css">
+			
+			/*去除浏览器的默认样式*/
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			/*去除页面的滚动条*/
+			body{
+				overflow: hidden;
+			}
+			
+			/*
+			 	设置图片的样式
+			 * */
+			#carImg{
+				width: 100%;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!--引入图片-->
+		<img id="carImg" src="img/car/0.jpg"/>
+		
+		<!--编写js代码-->
+		<script type="text/javascript">
+			/*
+			 * 360全景图片
+			 * 	功能：根据鼠标拖动的不同方向去切换不同的图片
+			 * 	步骤：
+			 * 		1.当鼠标按下时，开始功能 onmousedown
+			 * 		2.当鼠标移动时，切换图片 onmousemove
+			 * 		3.当鼠标松开时，功能停止 onmouseup
+			 */
+			
+			//获取img对象
+			var carImg = document.getElementById("carImg");
+			
+			//创建一个变量，用来保存当前的显示的图片
+			var currentImgIndex = 0;
+			
+			//为document绑定一个鼠标按下的事件
+			document.onmousedown = function(event){
+				//兼容性处理
+				event = event || window.event;
+				//当鼠标按下时，开始功能
+				//获取到鼠标的移动距离
+				var dis = 0;
+				//获取鼠标的水平坐标
+				var begin = event.clientX;
+								
+				//为document绑定一个鼠标移动的事件
+				document.onmousemove = function(event){
+					//获取鼠标当前的水平坐标
+					
+					var current = event.clientX;
+					
+					//获取鼠标移动的距离
+					
+					dis = currentImgIndex + Math.floor((begin - current)/30);
+					//dis的值不能超过59
+					/*
+					 * 0
+					 * 1
+					 * 59
+					 * 60 --> 0
+					 * 61 --> 1
+					 * 62 --> 2
+					 */
+					
+					dis = dis % 60;
+					
+					/*
+					 * dis的值不能为负
+					 * 0  0.jpg
+					 * -1 59.jpg 60
+					 * -2 58.jpg
+					 * -3 57.jpg
+					 */
+					if(dis < 0){
+						dis += 60;
+					}
+					
+					//console.log("dis = "+dis);
+					
+					//修改img标签中显示的图片
+					carImg.src = "img/car/"+dis+".jpg";
+					
+				};
+				
+				//为document绑定一个鼠标松开的事件
+				document.onmouseup = function(){
+					
+					//清除document上的onmousemove和onmouseup事件
+					document.onmousemove = null;
+					document.onmouseup = null;
+					
+					//当鼠标松开更新图片的索引
+					currentImgIndex = dis;
+					
+				};
+					
+				//取消默认行为
+				return false;
+			};
+			
+			
+		</script>
+	</body>
+</html>
