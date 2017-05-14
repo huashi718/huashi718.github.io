@@ -38,6 +38,28 @@ a:hover{
 	-webkit-transform: skew(-20deg);
 	-o-transform: skew(-20deg);
 }
+/*关于我*/
+.about-me{
+	text-align: left;
+	width: 260px;
+	position: absolute;
+	bottom:-95px;
+	color:#666;
+	
+}
+.container{
+	position: relative;
+}
+.about-me>img{
+	width:105px;
+	height:110px;
+	border: 3px solid #f16e50;
+}
+.word{
+	position: absolute;
+	left:110px;
+	bottom:5px;
+}
 /*底部*/
 .fr{
 	float: right;
