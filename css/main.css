@@ -1,0 +1,54 @@
+body{
+	background: #ddd6cc;
+}
+a:hover{
+	text-decoration: none;
+	opacity: 0.6;
+	color: red;
+}
+/*导航栏*/
+.navbar{
+	background: #fff;
+}
+.navbar-brand{
+	position: relative;
+	margin-right:50px;
+}
+.navbar-header img{
+	width: 22%;
+	position:absolute;
+	top:9px;
+	left:128px;
+}
+.navbar-nav>li.active>a{
+	background-color:#f16e50 !important ;
+	color:#fff !important;
+	transform: skew(-20deg);
+	-ms-transform: skew(-20deg);
+	-moz-transform: skew(-20deg);
+	-webkit-transform: skew(-20deg);
+	-o-transform: skew(-20deg);
+}
+.navbar-nav>li>a:hover{
+	background-color:#f16e50 !important ;
+	color:#fff !important;
+	transform: skew(-20deg);
+	-ms-transform: skew(-20deg);
+	-moz-transform: skew(-20deg);
+	-webkit-transform: skew(-20deg);
+	-o-transform: skew(-20deg);
+}
+/*底部*/
+.fr{
+	float: right;
+}
+.footer{
+	margin-top: 20px;
+	height: 200px;
+	text-align: center;
+	background:#242221;
+	color:#999;
+	box-sizing: border-box;
+	padding-top: 100px;
+	border-top:5px solid #f16e50;
+}
