@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>css3四方体动画</title>
+ </head>
+ <style>
+   html{
+      background:linear-gradient(#ff0 0%,#000 100%);
+	  height:100%;
+   }
+ #all{
+		-webkit-perspective:1500px;
+		margin:50px auto;
+	}
+    body{background-color:#ccc}
+    #imgs div{
+	   position:absolute;
+       left:350px;top:250px;
+	}
+	#imgs2 div{
+	   position:absolute;
+       left:450px;top:350px;
+	}
+	#imgs{
+	   -webkit-transform-style:preserve-3d;
+	   animation:imgs 6s linear  infinite;
+	   
+	}
+	#imgs2{
+	   -webkit-transform-style:preserve-3d;
+	   animation:imgs 6s linear  infinite;
+	}
+	#imgs img{
+	   width:250px;height:250px;
+	   opacity:0.4;
+	   border-radius:10%;
+	}
+
+	#imgs2 img{
+	   width:50px;height:50px;
+	   opacity:0.6;
+	   border-radius:10%;
+	}
+	#q{
+	   transform:translateZ(0px);
+	}
+	#h{
+	   transform:translateZ(-250px);
+	}
+	#z{
+	   transform:rotateY(90deg);
+       transform-origin:0%;
+	}
+	#y{
+	   transform:rotateY(-90deg);
+       transform-origin:100%;
+	}
+	#s{
+	   transform:rotateX(90deg);
+       transform-origin:0% 100%;
+	}
+	#x{
+	   transform:rotateX(-90deg);
+       transform-origin:100% 0%;
+	}
+	#q2{
+	   transform:translateZ(-100px);
+	}
+	#h2{
+	   transform:translateZ(-150px);
+	}
+	#z2{
+	   transform:translateZ(-100px)rotateY(90deg);
+       transform-origin:0%;
+	}
+	#y2{
+	   transform:translateZ(-100px)rotateY(-90deg);
+       transform-origin:100%;
+	}
+	#s2{
+	   transform:translateZ(-100px)rotateX(90deg);
+       transform-origin:0% 100%;
+	}
+	#x2{
+	   transform:translateZ(-100px)rotateX(-90deg);
+       transform-origin:100% 0%;
+	}
+	@-webkit-keyframes imgs{
+	   0%{
+	      transform: rotatey(0deg);
+	   }
+	   100%{
+	       transform:rotatey(360deg);
+	   }
+	  
+	}
+	
+	   
+	
+	#imgs:hover #q{
+	   transform:translateZ(100px);
+	}
+	#imgs:hover #h{
+	    transform:translateZ(-350px);
+	}
+	#imgs:hover #z{
+	    transform:translatex(-100px)rotateY(90deg);
+	}
+	#imgs:hover #y{
+	    transform:translatex(100px)rotateY(-90deg);
+	}
+	#imgs:hover #s{
+	    transform:translatey(100px)rotateX(90deg);
+	}
+	#imgs:hover #x{
+	    transform:translatey(-100px)rotateX(-90deg);
+	}
+	#imgs #q,#imgs #h, #imgs #z,#imgs #y, #imgs #s,#imgs #x{
+	transition:all 1s linear
+	}
+ </style>
+ <body>
+   <div id="all">
+	<div id="imgs">
+		<div id="q">
+			<img src="images/1.jpg"/>
+		</div>
+		<div id="h">
+			<img src="images/3.jpg"/>
+		</div>
+		<div id="z">
+			<img src="images/4.jpg"/>
+		</div>
+		<div id="y">
+			<img src="images/6.jpg"/>
+		</div>
+		<div id="s">
+			<img src="images/7.jpg"/>
+		</div>
+		<div id="x">
+			<img src="images/8.jpg"/>
+		</div>
+		</div>
+		<div id="imgs2">
+			<div id="q2">
+				<img src="images/1 - 副本.jpg"/>
+			</div>
+			<div id="h2">
+				<img src="images/3 - 副本.jpg"/>
+			</div>
+			<div id="z2">
+				<img src="images/4 - 副本.jpg"/>
+			</div>
+			<div id="y2">
+				<img src="images/6 - 副本.jpg"/>
+			</div>
+			<div id="s2">
+				<img src="images/7 - 副本.jpg"/>
+			</div>
+			<div id="x2">
+				<img src="images/8 - 副本.jpg"/>
+			</div>
+	</div>
+  </div>
+
+ </body>
+</html>

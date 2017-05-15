@@ -1,0 +1,119 @@
+.main-content{
+	margin:0px auto;
+	margin-bottom:45px;
+	background: #f5f5f5;
+}
+/*轮播图*/
+.swiper-container{
+	margin-top:44px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.swiper-container img{
+	width: 100%;
+	height: 100%;
+}
+/*导航栏*/
+.nav-bar{
+	width: 100%;
+	overflow: hidden;
+	background: #fff;
+	padding: 10px 0px;
+	margin-top:-3px;
+	margin-bottom: -9px;
+}
+.nav-bar li{
+	display: block;
+	width: 25%;
+	float: left;
+	text-align: center;
+	padding-top:10px;
+}
+.nav-bar li img{
+	border-radius:50%;
+	width: 66%;
+}
+.nav-bar p{
+	font-size: 1.2rem;
+}
+/*图片展示*/
+.imgbox{
+	padding: 10px 5px;
+}
+.imgbox img{
+	width: 100%;
+	padding-top:10px ;
+}
+/*图片分类*/
+.list-box{
+	overflow: hidden;
+	border: 1px solid #ccc;
+	border-bottom:none;
+	margin-top: 10px;
+}
+.list-box li{
+	isplay: block;
+	width: 33.33%;
+	float: left;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	box-sizing: border-box;
+}
+.list-box li.noborder{
+	border-right: none;
+}
+.list-box  img{
+	width: 100%;
+	height: 100%;
+}
+/*特色市场*/
+.item-market{
+	background: #FFFFFF;
+	border-top:1px solid #CCCCCC;
+	padding-top:18px;
+	overflow: hidden;
+}
+.item-market h1{
+	font-size: 2.0em;
+	color: #FC324A;
+	padding-left:6px;
+	font-weight: normal;
+	padding-bottom: 5px;
+}
+.item-market li{
+	float:left;
+	width: 33.33%;
+	box-sizing: border-box;
+	border-right:1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.item-market li.noborder{
+	border-right: none;
+}
+.item-market li img{
+	width: 100%;
+}
+/*猜你喜欢*/
+.your-like h1{
+	width: 100%;
+	background: #FFFFFF;
+	padding-top: 16px;
+	font-size: 2.0em;
+	color: #FC324A;
+	padding-left:6px;
+	font-weight: normal;
+}
+.your-like ul{
+	padding-top: 5px;
+	padding-left: 10px;
+	overflow: hidden;
+}
+.your-like ul li{
+	float: left;
+	width: 49%;
+	margin-right:1%;
+	margin-top: 6px;
+}
+.your-like ul li img{
+	width: 100%;
+}

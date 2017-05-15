@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="Description" content="森巢网是一个买家具的电商网站"/>
+		<meta name="Keywords" content="床，地板，门，灯"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>森巢网</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="css/detail.css"/>
+	<body>
+		<!--公用头部-->
+		<header class="header">
+			<a class="btn-left" onclick="history.go(-1)"></a>
+			<span class="text-detail">商品详情</span>
+			<input name=""value = "" class="btn-detail" />
+		</header>
+		<!--主要内容-->
+		<section class="main-content ">
+			<!--轮播图-->
+			<div class="swiper-container">
+		        <div class="swiper-wrapper">
+			        	<div class="swiper-slide">
+			        		<img src="images/index/1488350938-1879339224.jpg"/>	        
+			        	</div>
+			        	<div class="swiper-slide">
+			        		<img src="images/index/1488016747-1676319493.jpg"/>
+			        	</div>
+			        	<div class="swiper-slide">
+			        		<img src="images/index/1488248319-623813167.jpg"/>	        
+			        	</div>
+			        	<div class="swiper-slide">
+			        		<img src="images/index/1488191264-1488305946.jpg"/>	        
+			        	</div>
+		        </div>
+	        	<div class="swiper-pagination"></div>
+	   		</div>
+	   		<!--商品标题-->
+	   		<div class="title">
+	   			<h1>【迪娜沙发】 G-12# 实木真皮沙发   沃卷纹扶  手欧式  实木沙发       真皮贵族风格沙发</h1>
+	   		</div>
+	   		<!--商品价格-->
+	   		<div class="price">
+	   			<s>市场价:62800.00</s>
+	   			<p>森巢价:<span>￥51900.00</span></p>
+	   		</div>
+	   		<!--选择规格-->
+	   		<div class="select">
+	   			<p>请选择规格</p>
+	   			<div class="select-son">
+	   				<span>2000*1800床（不含床头柜）</span>
+		   			<span>8016#床头柜</span>
+		   			<span>2000*1500床（不含床头柜）</span>
+		   			<div class="select-num">
+		   				<span>数量</span>
+		   				<div class="num">
+		   					<s>-</s><input type="text" value="1"/><i>+</i>
+		   				</div>
+		   			</div>
+	   			</div>
+	   		</div>
+	   		<div class="save">
+	   			<img src="images/commodityDetail/wap_kuangh.jpg" alt="" />
+	   			<button>收藏产品</button>
+	   		</div>
+	   		<img src="images/commodityDetail/1446712582-2130714666.jpg" alt="" />
+	   		<img src="images/commodityDetail/1446712587-1520659481.jpg" alt="" />
+	   		<img src="images/commodityDetail/1446712586-1561533285.jpg" alt="" />
+	   		<img src="images/commodityDetail/1446712592-1326495669.jpg" alt="" />
+	   		<img src="images/commodityDetail/1446712594-343314127.jpg" alt="" />
+	   		<img src="images/commodityDetail/info_01.jpg" alt="" />
+	   		<img src="images/commodityDetail/info_02.jpg" alt="" />
+		</section>
+		<!--公用底部-->
+		<footer id="footer">
+			<div class="footer">
+				<ul class="footer-nav">
+					<li>
+						<i class="phone"></i>
+					</li>
+					<li>
+						<i class="massage"></i>
+					</li>
+					<li>
+						<i class="cartgoods">购物车</i>
+						<span>购物车</span>
+					</li>
+					<li class="mycart">
+						<p class="addcart">加入购物车</p>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript">
+	var mySwiper = new Swiper('.swiper-container', {
+		pagination: '.swiper-pagination',  //分页器，指示slide的数量和当前活动的slide
+        loop : true, //loop模式：会在原本slide前后复制若干个slide并在合适的时候切换，让Swiper看起来是循环的
+        autoplay : 3000,		//自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换
+        paginationHide :true,   //默认分页器会一直显示。这个选项设置为true时点击Swiper会隐藏/显示分页器。
+        paginationClickable: true,  //此参数设置为true时，点击分页器的指示点分页器会控制Swiper切换。
+	})
+</script>

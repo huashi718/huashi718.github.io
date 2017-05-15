@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="Description" content="森巢网是一个买家具的电商网站"/>
+		<meta name="Keywords" content="床，地板，门，灯"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>森巢网</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	<body>
+		<!--公用头部-->
+		<header class="header">
+			<a class="btn-left" onclick="history.go(-1)"></a>
+			<input class="text-input" placeholder="请输入关键词"/>
+			<input type="submit" name=""value = "" class="btn-sub" />
+		</header>
+		<!--主要内容-->
+		<section class="main-content">
+			<div class="img">
+				<img src="images/logo.png"/>
+			</div>
+			<div class="login-wrap">
+				<p>账号：</p>
+				<input type="text" placeholder="请输入手机号"/>
+				<p>密码：</p>
+				<input type="text" placeholder="请输入密码"/>
+				<button class="login-now">立即登录</button>
+				<a href="">忘记密码?</a>
+				<button class="zhuce">立即注册</button>
+			</div>
+		</section>
+		<!--公用底部-->
+		<footer id="footer">
+			<div class="footer">
+				<ul class="footer-nav">
+					<a href="index.html" >
+						<li>
+							<i class="home"></i>
+							<span>森巢</span>
+						</li>
+					</a>
+					<a href="classify.html" >
+						<li>
+							<i class="category "></i>
+							<span>分类</span>
+						</li>
+					</a>
+					<a href="cart.html" >
+						<li>
+							<i class="cartgoods"></i>
+							<span>购物车</span>
+						</li>
+					</a>
+					<a href="login.html"  class="active">
+						<li>
+							<i class="i"></i>
+							<span>我的</span>
+						</li>
+					</a>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>
+<script type="text/javascript">
+	console.log(localStorage.value);
+	console.log(typeof["a"])
+</script>
+
