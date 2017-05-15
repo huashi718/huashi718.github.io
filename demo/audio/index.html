@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>音乐播放器</title>
+		<!--导入BS的css文件-->
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+		<!--导入jquery文件-->
+		<script src="bootstrap/js/jquery.min.js" type="text/javascript">
+		</script>
+		<script  src="bootstrap/js/bootstrap.min.js" type="text/javascript">
+		</script>
+		<link rel="stylesheet" type="text/css" href="bofang.css"/>
+	</head>
+	<body>
+	<div class="player-page">
+		<audio id="player" src="audio/凉凉.mp3"
+			></audio>
+		<div class="jiantouBtn ">
+			 < 
+		</div>
+		<div id="content" >
+			<ul class="top">
+				<li class="bgray">2016单曲集</li>
+				<li>青年晚报</li>
+				<li>不如吃茶去</li>
+			</ul>
+			<div class="singer_info">
+				<span>歌名</span>
+				<span>歌手</span>
+				<span>时长</span>
+			</div>
+			<ul class="content">
+				<!--动态添加li信息-->
+				
+			</ul>
+			<div class="bottom">
+				<div class="pictor fl">
+					<img  class = "img" src="images/lianglang.jpg" alt="" />
+				</div>
+				<div class="fl">
+					<div class="jieshao">
+						<ol class="fl">
+							<li id="title">凉凉</li>
+							<li id="author">张碧晨</li>
+							<li id="time">05:23</span></li>
+						</ol>
+						<div class="kongjian fl">
+							<s onclick="dealPre()"></s>
+							<p>
+								<s onclick="dealPlay()"></s>
+								<!--<span ></span>-->
+							</p>
+							<b onclick="dealNext()"></b>
+							<div class="loopBtn">
+								<u onclick="dealLoop(this)"></u>
+								<!--<span class="loop" onclick="dealLoop(this)"></span>-->
+							</div>
+							<!--静音小喇叭-->
+							<div class="volume">
+								<i onclick="dealVolume()"></i>
+								<!--<span class="jinyin" onclick="dealVolume()"></span>-->
+							</div>
+							
+							<!--播放列表折叠按钮-->
+							<div class="zhedieBtn">
+							</div>
+							<!--音量条-->
+							<div id="progress-t" >
+									<div id="track-t">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--进度条-->
+				<div id="progress">
+					<div id="track">
+			
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	</body>
+	<script type="text/javascript">
+		var player = document.getElementById("player");
+		var track = document.getElementById("track");
+		var progress = document.getElementById("progress");
+		var contentUl = document.querySelector(".content");
+		
+		//音量条
+		var volumeProgress = document.getElementById("progress-t");
+		var volumeTrack = document.getElementById("track-t");
+		//歌曲信息介绍
+		var pImg = document.querySelector(".img");
+		var titleTag = document.getElementById("title");
+		var authorTag = document.getElementById("author");
+		var timeTag = document.getElementById("time");
+		
+		var playIndex = 0;
+		
+		//折叠按钮
+		var zhedieBtn = document.getElementsByClassName("zhedieBtn")[0];
+		var contentBox = document.getElementById("content");
+		
+		//播放，暂停，循环
+		var kongjian = document.getElementsByClassName("kongjian")[0];
+		var playBtn = kongjian.getElementsByTagName("p")[0];
+		
+		//1.实现播放暂停功能
+		var isPlay = false;
+		function dealPlay(){
+			if(isPlay == false){
+					player.play();
+					playBtn.innerHTML = "<span onclick='dealPlay()'></span>";
+					isPlay = true;
+				}
+			else{
+				player.pause();
+				playBtn.innerHTML = "<s onclick='dealPlay()'></s>";
+				isPlay = false;
+			}
+		}
+		//2.是否循环
+		function dealLoop(tag){
+			var loopBtn = document.getElementsByClassName("loopBtn")[0];
+			//console.log(loopBtn);
+			if(!player.loop){
+				player.loop = true;
+				loopBtn.innerHTML = "<span class='loop' onclick='dealLoop(this)'></span>";
+			}
+			else{
+				player.loop = false;
+				loopBtn.innerHTML ="<u onclick='dealLoop(this)'></u>";
+			}
+		}
+		
+		//3.实现上一曲，下一曲
+		function dealPre(){
+			playIndex--;
+			if(playIndex<0){
+				playIndex=audioList.length-1;
+			}
+			loadAudioOnIndex(playIndex);
+			playMusicOnIndex();
+		}
+		function dealNext(){
+			
+			playIndex++;
+			if(playIndex>=audioList.length){
+				playIndex=0;
+			}
+			loadAudioOnIndex(playIndex);
+			playMusicOnIndex();
+		}
+		
+		//4.实现控制音量功能
+		volumeProgress.addEventListener("click",function(event){
+			var v = event.offsetX/100;
+			console.log(v);
+			player.volume = v ;
+			volumeTrack.style.width = v*100+"%";
+			volumeBtn.innerHTML = "<i onclick='dealVolume(this)'></i>";
+			
+		})
+		//5.进度条显示控制当前进度
+		setInterval(function(){
+			if(player.duration>0){
+				var p = player.currentTime/player.duration;
+				track.style.width=p*100+"%";
+			}
+		},0.1)
+		 //进度条控制进度
+		progress.addEventListener("click",
+		function(event){//根据点击的位置的百分比
+			var p = event.offsetX/400;
+			//获取播放时间
+			var currentTime = p*player.duration;
+			//设置时间
+			player.currentTime = currentTime;
+			
+		})
+		
+		//6.实现点击播放列表，播放对应歌曲功能
+		
+		//歌曲信息
+		var audioList = [
+			{
+				"title":"凉凉",
+				"author":"张碧晨",
+				"src":"audio/凉凉.mp3",
+				"poster":"images/lianglang.jpg",
+				"duration":"05:33"
+				
+			},
+			{
+				"title":"卜卦",
+				"author":"崔子格",
+				"src":"audio/卜卦.mp3",
+				"poster":"images/rm.jpg",
+				"duration":"03:34"
+				
+			},
+			{
+				"title":"七月上",
+				"author":"文文小倩",
+				"src":"audio/七月上.mp3",
+				"poster":"images/test.jpg",
+				"duration":"03:06"
+				
+			},
+			{
+				"title":"成都",
+				"author":"文文小倩",
+				"src":"audio/成都.mp3",
+				"poster":"images/tsb.jpg",
+				"duration":"04:50"
+				
+			},
+		]
+		
+		
+		//遍历列表内所有歌曲,在ul中完成动态添加
+		function show_list_audio(){
+			for(i=0;i< audioList.length;i++)
+			{
+				var audioDict = audioList[i];
+				//创建li 
+				var li = document.createElement("li");
+				var titleSpan = document.createElement("span");
+				var authorSpan = document.createElement("span");
+				var durationSpan = document.createElement("span");
+				
+				titleSpan.innerHTML = audioDict.title;
+				authorSpan.innerHTML = audioDict.author;
+				durationSpan.innerHTML = audioDict.duration;
+				
+				li.style.color = "white";
+				
+				li.appendChild(titleSpan);
+				li.appendChild(authorSpan);
+				li.appendChild(durationSpan);
+				
+				contentUl.appendChild(li);
+				//给li添加点击事件，点击li播放对应歌曲，加载响应歌曲信息。
+				li.setAttribute("data-index",i)
+				li.onclick = function (event){
+					//获取序号
+					var tag = event.target;
+					var index = tag.parentNode.getAttribute("data-index");
+					
+					playIndex = index;
+					loadAudioOnIndex(playIndex);
+					playMusicOnIndex(playIndex);
+				}
+				
+			}
+		}
+		
+		//在列表里点击歌曲，在下面加载出相应的歌曲信息
+		function loadAudioOnIndex(index){
+				//获取指定序号歌曲的数据
+				var dict = audioList[index];
+				pImg.src = dict.poster;
+				titleTag.innerHTML = dict.title;
+				authorTag.innerHTML = dict.author;
+				timeTag.innerHTML = "00:00/" + dict.duration;
+			
+				//当前歌曲- 设置不同颜色 - 当前歌曲红色，其他白色
+				var allLi = contentUl.children;
+				for(i=0;i<allLi.length;i++)
+				{
+					var li = allLi[i];
+					li.style.backgroundColor= "black";
+				}
+				var selectLi = allLi[playIndex];
+				selectLi.style.backgroundColor= "gray";
+				
+				//进度清0
+				//设置src
+				player.src = dict.src;
+			}
+		//按照序号播放响应歌曲
+		function playMusicOnIndex(index){
+				player.src = audioList[playIndex].src;
+				player.play();
+				isPlay = true;
+				//修改播放按钮（图片，文本）
+				if(isPlay== true)
+				{
+					playBtn.innerHTML = "<span onclick='dealPlay()'></span>";
+				}
+				else
+				{
+					playBtn.innerHTML = "<s onclick='dealPlay()'></s>";
+				}
+				
+				
+			}
+		
+		
+		show_list_audio();
+		loadAudioOnIndex(0);
+		
+		//7.实现音乐列表折叠功能
+		
+		var iszhedie = false;
+		zhedieBtn.onclick = function(){
+			if(iszhedie == false){
+				contentUl.style.display = "none";
+				iszhedie = true;
+			}else{
+				contentUl.style.display = "block";
+				iszhedie = false;
+			}
+		}
+		
+		//8.标题栏Tab 切换效果
+		var topUl = document.querySelector(".top");
+		var alis = topUl.getElementsByTagName("li");
+		for(var i=0;i<alis.length;i++)
+		{
+				alis[i].index=i;
+				alis[i].onclick=function()
+				{
+					for(var i=0;i<alis.length;i++)
+					{
+						alis[i].className='';
+					}
+					this.className='bgray';
+				}
+		}
+		
+		//9.点击播放区域右边的箭头，折叠播放区域
+		var jiantouBtn = document.querySelector(".jiantouBtn");
+		var playerPage = document.querySelector(".player-page")
+		var isShow = false;
+		jiantouBtn.onclick = function(){
+			if(isShow == false){
+				contentBox.style.display = "none";
+				playerPage.style.height = "490px";
+				jiantouBtn.innerHTML = ">";
+				jiantouBtn.style.left = "0%";
+				
+				isShow = true;
+			}else{
+				contentBox.style.display = "block";
+				playerPage.style.height = "";
+				jiantouBtn.innerHTML = "<";
+				jiantouBtn.style.left = "93%";
+				isShow = false;
+			}
+		}
+		
+		//10.点击小喇叭，静音功能
+		var isVolume = true;
+		var volumeBtn = document.getElementsByClassName("volume")[0];
+		//console.log(volumeBtn);
+		function dealVolume(){
+			if(isVolume ==true){
+				volumeBtn.innerHTML = "<span class='jinyin' onclick='dealVolume(this)'></span>";
+				player.volume = 0 ;
+				volumeTrack.style.width = 0+"%";
+				isVolume = false;
+				
+			}
+			else {
+				volumeBtn.innerHTML = "<i onclick='dealVolume(this)'></i>";
+				player.volume = 0.5 ;
+				volumeTrack.style.width = 50+"%";
+				isVolume = true;
+			}
+		}
+	</script>
+</html>
+

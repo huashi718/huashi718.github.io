@@ -110,8 +110,14 @@ a:hover{
 	margin-right: 2%;
 }
 .little_demo>img{
-	width: 100%;
+	width: 100px;
+	height:100px;
+	margin-bottom: 5px;
 	border-radius:100% ;
+	transition: all 0.2s linear;
+}
+.little_demo>img:hover{
+	transform:scale(1.1);
 }
 /*demo放大*/
 /*.mylabel-content>a:hover .mylabel-content>a>div>img{

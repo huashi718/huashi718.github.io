@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--导入BS的css文件-->
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+		<!--导入jquery文件-->
+		<script src="bootstrap/js/jquery.min.js" type="text/javascript">
+		</script>
+		<script  src="bootstrap/js/bootstrap.min.js" type="text/javascript">
+		</script>
+		<style type="text/css">
+		    *{
+		    	margin:0px;
+		    	padding:0px;
+		    }
+			body{
+				background-color:lightcoral;
+				text-align: center;
+			}
+			#content{
+				background-color:#eeeef0;
+				width:600px;
+				height:424px;
+				margin:0 auto;
+				position:relative;
+			}
+			.top{
+				width:600px;
+				height: 44px;
+				box-sizing: border-box;
+				padding:10px 0px;
+				color:gray;
+				background-color: #e9eaec;
+				
+				margin-top:84px;
+			}
+			.bottom{
+				display: inline-block;
+				width:600px;
+				height: 40px;
+				background-color: #eeeef0;
+				box-sizing: border-box;
+				padding:10px 5px;
+			}
+			.jindutiao{
+				width:400px;
+				
+			}
+			.right{
+				float:right;
+			}
+			.fl{
+				float:left;
+			}
+			img{
+				width:26px;
+				height:26px;
+				
+			}
+			.img1{
+				margin-right: 5px;
+			}
+			span{
+				margin:0px 10px;
+			}
+			#fauto {
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				text-align: center;
+				border: 1px solid black;
+				background: lightcoral;
+				border-radius: 50%;
+				left: 250px;
+				top: 150px;
+				transition: all 1s ease;
+				display:none;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<div id="fauto">
+				<svg>
+					<polygon points="20,5 20,75 80,40 20,5" transform="translate(10 10)" fill="white"></polygon>
+				</svg>
+			</div>
+			<div class="top">
+				<h5>Tara - 懂的那份感觉</h5>
+			</div>
+			<video id="player" width="600px" height="340px">
+			 有同一个视频的不同格式
+			 	<source src="E9B7063.mp4"></source>
+			 	<source src="E9B7063.mp4"></source>
+			</video>
+			<div class="bottom">
+				<img onclick="dealPlay()" class="img1 fl" src="images/1_07.png" alt="" align="left"/>
+				<span class="fl">00:01:00</span>
+				<!--进度条-->
+				<div class="jindutiao fl">
+					<div id="progress" class="progress progress-striped">
+		   				<div id="track" class="progress-bar progress-bar-danger" role="progressbar" 
+					     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" 	
+					      style="width:0%;">
+		      				
+		   				</div>
+					</div>	
+				</div>
+		   		<img src="images/1_10.png" alt="" />
+		   		<img onclick="dealFill()" src="images/1_12.png" alt="" />
+			</div>
+		</div>
+		
+	<!--js代码-->
+	<script>
+		var player = document.getElementById("player")
+		var img1 = document.getElementsByClassName("img1")[0]
+		var track = document.getElementById("track")
+		var progress = document.getElementById("progress")
+		
+		//播放
+		var num = 0
+		function dealPlay(){
+			player.play()
+			img1.src = "images/3_03.png"
+			num++
+		//暂停
+			if(num%2==0){
+			 player.pause()
+			 img1.src = "images/1_07.png"
+			}
+		}
+		//进度条显示进度
+		setInterval(function(){
+			if(player.duration>0){
+				var p = player.currentTime/
+				player.duration
+				track.style.width=p*100+"%"
+			}
+		},0.1)
+		//修改进度
+		progress.addEventListener("click",
+		function(event){
+			//根据点击的位置的百分比
+			//event.offsetX/400  400为设置的进度条的宽度
+			var p = event.offsetX/400 
+			
+			//获取播放时间
+			var currentTime = p*player.duration
+			//设置时间
+			player.currentTime = currentTime
+			
+		})
+		//全屏
+		function dealFill(){
+			if(player.requestFullscreen){
+				player.requestFullscreen()
+			}
+			if(player.webkitRequestFullScreen){
+				player.webkitRequestFullScreen()
+			}
+			if(player.mozRequestFullScreen){
+				player.mozRequestFullScreen()
+			}
+			if(player.msRequestFullscreen){
+				player.msRequestFullscreen()
+			}
+		}
+			
+	</script>
+	</body>
+</html>

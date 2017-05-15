@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		#d{
+			width:450px;
+			height:700px;
+			margin:100px auto;
+			background:#eee;
+			
+		}
+		#top{
+			height:25px;
+			background:black;
+			line-height:25px;
+			padding:10px;
+			
+		}
+		#d1{
+			height:595px;
+			padding:10px;
+			box-sizing:border-box;
+			list-style: none;
+			overflow: auto;
+		}
+		#bottom{
+			height:50px;
+			background:#999;
+			padding:5px;
+		}
+		#top>span{
+			font-size:20px;
+			color:#fff;
+		}
+		.fr{
+			float:right;
+		}
+		.fl{
+			float:left;
+		}
+		#bottom>img{
+			display:inline-block;
+			width:50px;
+			height:50px;
+			border-radius:50%;
+			margin-left:20px;
+			float:left;
+		}
+		input{
+			width:270px;
+			height:45px;
+			backround:#fff;
+			border-radius:10px;
+			color:#999;
+			font-size:20px;
+			margin-left:25px;
+		}
+		input:focus{
+			outline:none;
+		}
+		button{
+			width:60px;
+			height:48px;
+			border-radius:10px;
+			font-size:15px;
+			font-weight:bolder;
+			border:none;
+		}
+		button:focus{
+			outline:none;
+		}
+		button:hover{
+			background:#ccc;
+			color:#fff;
+		}
+		.text{
+			border:1px solid #999;
+			border-radius:10px;
+			margin-right: 20px;
+			margin-left: 20px;
+			font-size:12px;
+			padding:12px 20px;
+			max-width:300px;
+			
+		}
+		li>span>img{
+			display:inline-block;
+			width:45px;
+		}
+		li{
+			overflow: hidden;
+			margin-bottom:5px;
+		}
+		#bg{
+			background:#7cfc00;
+		}
+	</style>
+</head>
+<body>
+<div id="d">
+	<div id="top">
+		<span>微聊</span>
+		<span id='span' class='fr'></span>
+	</div>
+	<ul id='d1'>
+		<!-- <li>
+			<span class='fr'>
+			 <img src="images/1.jpg">
+			</span>
+			<span class="text fr">你好你好</span>
+		</li>
+		<li>
+			<span class='fl'>
+			 <img src="images/2.jpg">
+			</span>
+			<span class="text fl" id="bg">你好你好</span>
+		</li> -->
+	</ul>
+	<div id='bottom'>
+		 <img src="1.jpg" onclick="changeUser()">
+		 <input type="" name="" value="想说点什么？">
+		 <button onclick="send()">发送</button>
+	</div>
+</div>
+</body>
+	<script type="text/javascript">
+		//获取时间
+		 var date = new Date();
+		 var hour = date.getHours();
+		 var mins = date.getMinutes();
+		 //var second = date.getSeconds();
+		 function double(n){
+			var n= n>10 ?  ""+n :"0"+n;
+			 return n;
+		 }
+		 var time =double(hour) +":" + double(mins)//+":"+double(second);
+		 var span = document.getElementById("span");
+		 span.innerHTML = time;
+
+		 //添加事件，点击按钮添加li;
+		 var ul = document.getElementById("d1");
+		 var nowUser = 1;//定义当前用户，默认1;
+		 var bottom = document.getElementById("bottom");
+		 //点击头像按钮，切换用户和头像
+		 function changeUser(){
+		 		var img = bottom.getElementsByTagName("img")[0];
+		 		if(nowUser==1){
+		 			nowUser=2;
+		 			img.src = "2.jpg"
+		 		}else{
+		 			nowUser=1;
+		 			img.src = "1.jpg"
+		 		}
+		 }
+
+
+
+		 //点击发送按钮，动态添加li
+		 function send(){
+		 	var input = bottom.getElementsByTagName("input")[0];
+		 	var info = input.value 
+		 	if(nowUser == 1){//默认当前用户时，往ul添加右浮动的li;
+		 		ul.innerHTML = ul.innerHTML + "<li><span class='fr'><img src='1.jpg'></span><span class='text fr'>"+info+"</span></li>"
+		 	}else{
+		 		ul.innerHTML = ul.innerHTML + "<li><span class='fl'><img src='2.jpg'></span><span class='text fl' id='bg'>"+info+"</span></li>"
+		 	}
+		 	input.value = "";
+		 	//获取滚动内容高度
+		 	//实际内容高度>可见区的高度  出现滚动条
+		 	//滚动距离
+		 	if(ul.scrollHeight>ul.clientHeight) {
+		 		//滚动到最下方
+		 		var ret = ul.scrollHeight - ul.clientHeight;
+		 		ul.scrollTop = ret;
+		 	}
+		 }
+	</script>
+</html>
