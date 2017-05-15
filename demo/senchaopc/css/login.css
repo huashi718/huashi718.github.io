@@ -1,0 +1,41 @@
+.header{display: block;width: 100%;height: 90px;background: #fff;}
+.headercon{display: block;width: 980px;height: auto;overflow: hidden;margin: 0 auto;}
+.logo{display: block;float: left;height: auto;overflow: hidden;margin-top: 20px;}
+.logo-txt{display: block;float: left;font-family: 'Microsoft Yahei'; font-size: 24px;color: #999;margin-top: 33px;margin-left: 20px;}
+.lbody{display:block;width: 100%;height: 600px;background:url(../images/login_bg.jpg);}
+.lbody .center{display: block;position: relative; width: 980px;height: 600px;margin: 0 auto}
+.loginmain{display: block;width: 300px;padding: 0 25px; height: 360px;background: #fcebf4; position: absolute;top: 100px;right: 0;z-index: 99}
+.loginmain .title{display: block;font-family: 'Microsoft Yahei';font-size: 18px;font-weight: bold;color: #333;height: 20px;margin-top: 30px;}
+.loginmain .inputdiv{display: block;position: relative; height: 40px;background: #faffbd; border: 1px solid #ddd;margin-top:20px;}
+.loginmain .inputdiv label{display: block;float: left;width: 40px;height: 40px;text-align: center;line-height: 40px; background: #ddd;}
+.iconfont{font-family: iconfont!important;font-size:20px;    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: .2px;color: #fff;}
+
+.iconfont1{font-family: iconfont!important;font-size:20px;    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: .2px;color: #666;}
+.loginmain .inputdiv input{display: block;float: left;font-family: 'Microsoft Yahei'; width: 230px;background:#faffbd; font-size: 14px;color: #666;line-height: 40px; height: 40px;padding-left: 10px; border: none;}
+.loginmain .inputdiv input:focus{outline: none;}
+.clearinput{display: block;display:none; width: 20px;height: 20px;position: absolute;right:5px;top: 10px;}
+.text-area{display: block;font-family: 'Microsoft Yahei';color: #666;font-size:14px; height: 30px;line-height: 30px; margin-top:20px;}
+.text-area .left{float: left;}
+.text-area .right{float: right;}
+.loginmain .submit{width: 300px;margin-top: 10px;font-family: 'Microsoft Yahei';
+    height: 42px;
+    border: 0;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    line-height: 42px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    background: #f40;
+    border-radius: 3px;
+    cursor: pointer;
+    zoom: 1;}
+.loginmain .submit:hover{background-color:#f52b00}
+.loginmain .message{display: block;display: none; background: #fff; position: absolute;top: 30px;left:25px;width: 300px; height:30px;border: 1px solid #f20000;border-radius: 3px;line-height:30px;}
+.loginmain .message .iconfont{color: #f20000;margin-left:10px; font-size:18px;}
+.loginmain .message #msgcon{font-family: 'Microsoft Yahei';margin-left:8px; color: #666}

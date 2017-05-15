@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta itemprop="image" content="http://www.senchaowang.com/Public/static/scw/logo.jpg" />
+	<title>森巢网</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/commodityDetail.css">
+</head>
+
+<body>
+	<!--头部-->
+	<header>
+		<div class="header-main">
+			<!--header 1.1内容-->
+			<img src="images/event.jpg" class="ads-picture"/>
+			<div class="header-son-first">
+				<div class="maxWidth">
+					<div class="left-header-content fl">收藏本站</div>
+					<div class="right-header-content fr">
+						<span>欢迎光临森巢网</span>
+						<a href="login.html" class="loginLink" >请登录</a>
+						<a href="/member/index/register.html" class="registLink" >免费注册</a>
+					</div>
+				</div>
+			</div>
+			<!--header 1.2内容-->
+			<div class="header-son-second maxWidth clear">
+				<!--logo-->
+				<a href="index.html" id="logo" class="fl">
+					<img alt="森巢网" title="森巢网" src="images/logoBig.png">
+				</a>
+				<!--城市列表-->
+				<div class="city-list-content fl">
+					<span class="city-name">兰州市</span>
+					<!--选择更多的城市列表-->
+					<div id="J_moreCity">
+						<div class="area-font-selected ">
+							<span class="fl">当前地区：兰州市</span>
+							<a href="javascript:;" class="detail-infoSpace">查看附近体验馆</a>
+						</div>
+						<div class="city-list">
+							<!-- <span>兰州市</span>
+							<span>嘉峪关市</span>
+							<span>金昌市</span>
+							<span>白银市</span>
+							<span>天水市</span>
+							<span>武威市</span>
+							<span>张掖市</span>
+							<span>平凉市</span>
+							<span>酒泉市</span>
+							<span>庆阳市</span>
+							<span>定西市</span>
+							<span>陇南市</span>
+							<span>临夏回族自治州</span>
+							<span>甘南藏族自治州</span> -->
+						</div>
+					</div>
+				</div>
+				<!--搜索框内容-->
+				<div class="search-main fl">
+					<div class="SearchBar">
+						<input type="text" name="keywords" placeholder="年终好货折上满额送现金" value="" class="keywords fl">					
+						<input type="submit" value="搜索" class="btn_search fr" onfocus="this.blur();">
+					</div>
+					<div class="maxKey">
+						<span>热门搜索:</span>
+						<a href="commondityList.html">沙发</a>
+						<a href="commondityList.html">床</a>
+						<a href="commondityList.html">茶几</a>
+						<a href="commondityList.html">电视柜</a>
+						<a href="commondityList.html">餐桌</a>
+						<a href="commondityList.html">木门</a>
+						<a href="commondityList.html">地板</a>
+						<a href="commondityList.html">卫浴</a>
+						<a href="commondityList.html">私人定制</a>
+						<a href="commondityList.html">窗帘</a>
+						<a href="commondityList.html">儿童家具</a>
+					</div>
+				</div>
+				<!--右侧购物车-->
+				<div class="right-cart-main fr">
+					<div class="maxService fl">
+						<span>我的森巢</span>
+					</div>
+					<div class="fl myCart">
+						<div class="cart-area">
+							去购物车结算
+							<span class="shopping">
+								<span class="shopping-amount">1.00</span>
+							</span>
+						</div>
+						<!--购物车内容-->
+						<div id="J_mycart">
+							<h2>我的购物车</h2>
+							<div class="cartgoodslist">
+								<ul>
+									<li>
+										<img src="images/1443599151-1565379065.jpg" class="span-pic"/>
+										<span class="span-title">客厅酒柜时尚装饰展示柜现代简约屏风玄关柜储物柜 X1.00</span>
+										<span class="spbtndel">删除</span>
+									</li>
+									<li>
+										<img src="images/1443599151-1565379065.jpg"  class="span-pic">
+										<span class="span-title">客厅酒柜时尚装饰展示柜现代简约屏风玄关柜储物柜 X1.00</span>
+										<span class="spbtndel">删除</span>
+									</li>
+								</ul>
+								<a href="cart.html" class="btn-gotucart fr">购物车结算</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--header 1.3内容-->
+			<div class="header-son-third">
+				<div class="maxWidth">
+					<!--所有产品分类-->
+					<div class="commonidty-content fl" id="J_productMove">
+						<h1 class="title">所有产品分类</h1>
+						<div id="J_warpMenu">
+							<!--产品列表-->
+							<ol class="all-commoidty-list" id="J_menu">
+								<li>
+									<h3 >
+										<a href="commodityList.html">私人定制</a>
+									</h3> <i>&gt;</i>
+								</li>
+								<li>
+									<h3>
+										<a href="commodityList.html">家具</a>
+									</h3> <i>&gt;</i>
+								</li>
+								<li>
+									<h3>
+										<a href="commodityList.html">木地板</a>
+									</h3>
+									<i>&gt;</i>
+								</li>
+								<li>
+									<h3>
+										<a href="commodityList.html">灯饰</a>
+									</h3>
+									<i>&gt;</i>
+								</li>
+								<li>
+									<h3>
+										<a href="commodityList.html">洁具卫浴</a>
+									</h3>
+									<i>&gt;</i>
+								</li>
+								<li>
+									<h3>
+										<a href="commodityList.html">窗帘家纺</a>
+									</h3>
+									<i>&gt;</i>
+								</li>
+								<li>
+									<h3>
+										<a href="commodityList.html">净水器</a>
+									</h3>
+									<i>&gt;</i>
+								</li>
+								<li>
+									<h3>
+										<a href="commodityList.html">背景墙软包定制</a>
+									</h3>
+									<i>&gt;</i>
+								</li>
+								<li>
+									<h3>
+										<a href="commodityList.html">定制门类</a>
+									</h3>
+									<i>&gt;</i>
+								</li>
+								<li>
+									<h3>
+										<a href="commodityList.html">壁纸</a>
+									</h3>
+									<i>&gt;</i>
+								</li>
+								<li>
+									<h3>
+										<a href="commodityList.html">电线、开关、插座</a>
+									</h3>
+									<i>&gt;</i>
+								</li>
+								<li>
+									<h3>
+										<a href="commodityList.html">五金板材、龙骨、胶漆</a>
+									</h3>
+									<i>&gt;</i>
+								</li>
+								<li>
+									<h3>
+										<a href="commodityList.html">吊顶扣板</a>
+									</h3>
+									<i>&gt;</i>
+								</li>
+								<li>
+									<h3>
+										<a href="commodityList.html">线条、扶手、雕花</a>
+									</h3>
+									<i>&gt;</i>
+								</li>
+							</ol>
+							<!--产品列表子列表-->
+							<div class="commoidty-son-list" id="J_sonMenu">
+								<!--私人定制-->
+								<div class="commonidty-son-detail">
+									<ul class="commonidty-son-ul">
+										<li class="subViewItemimg">
+											<img src="images/menu/1434706131-1369975156.jpg" class="span-img"/>								
+											<p>酒柜</p>
+										</li>
+										<li class="subViewItemimg">
+
+											<img src="images/menu/1434704575-691506030.jpg" class="span-img"/>								
+											<p>衣柜</p>
+
+										</li>
+										<li class="subViewItemimg">
+											<img src="images/menu/1459240209-358038141.jpg" class="span-img"/>								
+											<p>博古架</p>
+
+										</li>
+										<li class="subViewItemimg">
+
+											<img src="images/menu/1459240634-1430512799.jpg" class="span-img"/>								
+											<p>橱柜</p>
+
+										</li>
+										<li class="subViewItemimg">
+											<img src="images/menu/1488174571-491123162.jpg" class="span-img"/>								
+											<p>儿童房定制</p>
+										</li>
+										<li class="subViewItemimg">
+											<img src="images/menu/1488174614-371264347.jpg" class="span-img"/>								
+											<p>书柜</p>
+										</li>
+									</ul>
+								</div>
+								<!--家具-->
+								<div class="commonidty-son-detail">
+									<!--三级菜单-->
+									<ul class="gear-styles fl" id="J_home">
+										<li class="active">欧式</li>
+										<li>法式</li>
+										<li>美式家具</li>
+										<li>中式家具</li>
+										<li>地中海</li>
+										<li>现代简约</li>
+										<li>布艺沙发</li>
+									</ul>
+									<!--三级菜单子列表-->
+									<div id="J_sonHome">
+										<ul class="commonidty-son-ul fl">
+												<li class="subItem">
+													<h4 class="subItem-title">
+														<a href="commodityList.html">卧室</a>
+													</h4>
+													<p class="subItem-three">
+														<a href="commodityList.html">床</a>
+														<a href="commodityList.html">床垫</a>
+														<a href="commodityList.html">衣柜</a>
+														<a href="commodityList.html">梳妆台</a>
+													</p>
+												</li>
+												<li class="subItem">
+													<h4 class="subItem-title">
+														<a href="commodityList.html">客厅</a>
+													</h4>
+													<p class="subItem-three">
+														<a href="commodityList.html">沙发</a>
+														<a href="commodityList.html">茶几/边桌</a>
+														<a href="commodityList.html">电视柜</a>
+														<a href="commodityList.html">鞋柜</a>
+														<a href="commodityList.html">其他</a>
+													</p>
+												</li>
+												<li class="subItem">
+													<h4 class="subItem-title">
+														<a href="commodityList.html">餐厅</a>
+													</h4>
+													<p class="subItem-three">
+														<a href="commodityList.html">餐桌</a>
+														<a href="commodityList.html">餐椅</a>
+													</p>
+												</li>
+												<li class="subItem">
+													<h4 class="subItem-title">
+														<a href="commodityList.html">红木家具</a>
+													</h4>
+													<p class="subItem-three">
+														<a href="commodityList.html">红木家具</a>
+													</p>
+												</li>
+												<li class="subItem">
+													<h4 class="subItem-title">
+														<a href="commodityList.html">书房</a>
+													</h4>
+													<p class="subItem-three">
+														<a href="commodityList.html">书柜</a>
+														<a href="commodityList.html">书房套装</a>
+													</p>
+												</li>
+												<li class="subItem">
+													<h4 class="subItem-title">
+														<a href="commodityList.html">儿童房</a>
+													</h4>
+													<p class="subItem-three">
+														<a href="commodityList.html">儿童衣柜</a>
+														<a href="commodityList.html">儿童椅</a>
+														<a href="commodityList.html">儿童床</a>
+														<a href="commodityList.html">儿童书柜</a>
+														<a href="commodityList.html">儿童书桌</a>
+														<a href="commodityList.html">儿童书椅</a>
+													</p>
+												</li>
+										</ul>
+										<ul class="commonidty-son-ul fl">
+												<li class="subItem">
+													<h4 class="subItem-title">
+														<a href="commodityList.html">卧室</a>
+													</h4>
+													<p class="subItem-three">
+														<a href="commodityList.html">床</a>
+														<a href="commodityList.html">床垫</a>
+														<a href="commodityList.html">衣柜</a>
+														<a href="commodityList.html">梳妆台</a>
+													</p>
+												</li>
+										</ul>
+									</div>
+								</div>
+								<!--木地板-->
+								<div class="commonidty-son-detail">
+									<ul class="commonidty-son-ul">
+										<li class="subViewItemimg">
+											<img src="images/menu/1434706131-1369975156.jpg" class="span-img"/>								
+											<p>木地板</p>
+										</li>
+									</ul>
+								</div>
+								<!--灯饰-->
+								<div class="commonidty-son-detail">
+									<ul class="commonidty-son-ul">
+										<li class="subViewItemimg">
+											<img src="images/menu/1434706131-1369975156.jpg" class="span-img"/>								
+											<p>灯饰</p>
+										</li>
+									</ul>
+								</div>
+								<!--洁具卫浴-->
+								<div class="commonidty-son-detail">
+									<ul class="commonidty-son-ul fl">
+										<li class="subItem">
+											<h4 class="subItem-title">
+												<a href="commodityList.html">洁具卫浴</a>
+											</h4>
+											<p class="subItem-three">
+												<a href="commodityList.html">床</a>
+												<a href="commodityList.html">床垫</a>
+												<a href="commodityList.html">衣柜</a>
+												<a href="commodityList.html">梳妆台</a>
+											</p>
+										</li>
+										<li class="subItem">
+											<h4 class="subItem-title">
+												<a href="commodityList.html">洁具卫浴</a>
+											</h4>
+											<p class="subItem-three">
+												<a href="commodityList.html">沙发</a>
+												<a href="commodityList.html">茶几/边桌</a>
+												<a href="commodityList.html">电视柜</a>
+												<a href="commodityList.html">鞋柜</a>
+												<a href="commodityList.html">其他</a>
+											</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--导航栏-->
+					<ul class="fl header-nav">
+						<li>
+							<a href="index.html">森巢首页</a>
+						</li>
+						<li>
+							<a href="javascript:;">巢划算</a>
+							<img class="img-hot" src="images/quanjin.gif"></li>
+						<li>
+							<a href="javascript:;">装修知识</a>
+						</li>
+						<li>
+							<a href="javascript:;">我秀我家</a>
+						</li>
+						<li>
+							<a href="javascript:;">兰州体验馆</a>
+							<img class="img-hot" src="images/hot.gif"></li>
+						<li>
+							<a href="javascript:;">装修美图</a>
+						</li>
+						<li>
+							<a href="javascript:;" target="_blank">VIP账号申请</a>
+						</li>
+						<li>
+							<a class="a-img-hot" href="javascript:;" target="_blank">
+								<img src="images/12geg.png" width="180"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--主要内容-->
+	<section>
+		<!--section 1.1-->
+		<div class="wrap mt10">
+			<!--左侧-->
+			<div class="goods-big-img">
+				<!--大图展示区域-->
+				<div class="zoom-content">
+					<div id="J_moveZoom">
+						<img  src="images/commodity/1482547542-1545893906.jpg_800x800.jpg" />
+						<div id="J_moveLayer"  class="move-picture"></div>
+					</div>
+
+					<div id="J_moveImg">
+						<img src="images/commodity/1482547542-1545893906.jpg_800x800.jpg" />
+					</div>
+				</div>
+				<!--缩略图展示区域-->
+				<div class="zoom-desc" id="J_tabPicture">
+					<a class="cloud-zoom-gallery"  href="images/commodity/1482547542-1545893906.jpg_800x800.jpg" >
+						<img class="zoom-tiny-image"  src="images/commodity/1482547542-1545893906.jpg_800x800.jpg">
+					</a>
+					<a class="cloud-zoom-gallery" href="images/commodity/1474355646-1380731667.jpg_800x800" >
+						<img class="zoom-tiny-image"  src="images/commodity/1474355646-1380731667.jpg_800x800.jpg" />
+					</a>
+				</div>
+				<!-- 发送体验馆地址 -->		
+				<div class="goodscon-tiyanguan">
+					<img src="images/commodity/scjjgc.jpg" class="tiy-logo"/>
+					<div class="tyg-con">
+						<p>您可以到我们的体验馆看展品，真实感受下我们的产品质量和风格哦！</p>
+						<a class="btn-sendadd" href="javascript:;"> 
+							免费发送体验馆地址
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--中间 -->
+			<div class="desc">
+				<!--商品介绍-->
+				<h2>
+					中式风格  简单纯粹 中式实木1.8米*2米双人床 气动高箱床 编号：JCTF 928#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</h2>
+				<!--商品编号-->
+				<p class="commodity-number">编号：928# 高箱床卖的是低箱床的价格，网络预约即可享100元代金券</p>
+				<!--商品价格-->
+				<div class="price"> 
+					<b>
+						市场价：
+						<span class="small-money">&yen;</span>
+						2990.00
+					</b> 
+					<p>
+						森巢价：
+						<span class="prices">
+							<span class="small-money">&yen;</span>
+							<span id="J_prices">1990.00</span>
+						</span>
+					</p>
+				</div>
+				<!--交易 评价-->
+				<ul class="tm-ind-panel">
+					<li>
+						累计交易<span class="tm-count">0</span>
+					</li>
+					<li>
+						累计评价<span class="tm-count">0</span>
+					</li>
+				</ul>
+				<!-- 规格 -->		
+				<ul class="standards-list" id="J_standardsList">
+					<li>
+						<span class="sp-title">规格：</span>	
+					</li>
+					<li>
+						<span class="specs-list"  data-price="1000">低箱+2个床头柜</span>
+					</li>
+					<li>
+						<span class="specs-list"  data-price="2000">低箱</span>
+					</li>	
+					<li>
+						<span class="specs-list"  data-price="3000">高箱+2个床头柜</span>
+					</li>	
+					<li>
+						<span class="specs-list"  data-price="4000">液压高箱</span>
+					</li>	
+					<li>
+						<span class="specs-list"  data-price="5000">床头柜</span>
+					</li>	
+				</ul>
+				<!-- 找客服问优惠活动 -->		
+				<div class="btn-favourable">找客服问优惠活动</div>
+				<!-- 库存和购买 -->
+				<div class="buy-goods-num">
+					<span class="sp-title">数量：</span>
+					<span class="change-inputnum">
+						<a href="javascript:;" onclick="numberOperate(1)" class="btn-left"></a>
+						<input type="text" id="J_coomodityNumber" class="btn-buys"  value="1">		
+						<a href="javascript:;" onclick="numberOperate(2)" class="btn-right"></a>
+						<span class="stock">(库存： <font id="J_stock" data-stock="500">500</font>)</span>
+					</span>
+					<div class="buy-main">
+						<a href="cart.html" >立即购买</a>
+						<a href="javascript:void(0);" class="btn-add-cart">加入购物车</a>
+					</div>
+				</div>
+			</div>
+			<!--//右侧推荐的产品，看了又看-->		
+			<div class="goods-showyouk">
+				<h2 class="h2-title">----看了又看----</h2>
+				<ul class="scoolgoods">
+					<li>
+						<a href="javascript:;">
+							<img src="images/commodity/1462237918-591224647.jpg_260x260.jpg"></a>
+						<span class="sp-prices">&yen; 7190.00</span>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="images/commodity/1461996856-1628881206.jpg_260x260.jpg"></a>
+						<span class="sp-prices">&yen; 6390.00</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--section 1.2   详情展示区域开始-->
+		<div class="wrap mt10">
+			<!--左侧内容-->
+			<div class="goods-con-left">
+				<!--热销排行榜-->
+				<div class="hot-ranking-list">
+					<h2 class="left-title">热销排行榜</h2>
+					<ul class="product-list">
+						<li>
+							<a href="javascript:;" class="thumb-holder" target="_blank">
+								<img src="images/commodity/1446628960-744064051.jpg_260x260.jpg" />
+								<p class="title-text">【迪那】D-4020# 长茶几 实木茶几 长桌子客厅茶几 原木茶几 典雅茶几</p>
+								<p class="price">
+									<span class="price-prev">￥5586.00</span>
+									<span class="price-current">￥3190.00</span>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="thumb-holder" target="_blank">
+								<img src="images/commodity/1446623140-231609338.jpg_260x260.jpg" />
+								<p class="title-text">【迪那】D-4004# 古典实木茶几 长方几 复古美式实木茶几</p>
+								<p class="price">
+									<span class="price-prev">￥6426.00</span>
+									<span class="price-current">￥3390.00</span>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="thumb-holder" target="_blank">
+								<img src="images/commodity/1482551787-1328221940.jpg_260x260.jpg" />
+								
+								<p class="title-text">法式 小户型实木米黄色茶几 CT-5012#</p>
+								<p class="price">
+									<span class="price-prev">￥4750.00</span>
+									<span class="price-current">￥3390.00</span>
+								</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!--我的浏览-->
+				<div class="hot-ranking-list">
+					<h2 class="left-title">我的浏览</h2>
+					<ul class="product-list">
+						<li>
+							<a href="javascript:;" class="thumb-holder" target="_blank">
+								<img src="images/commodity/1460958603-834518485.jpg_260x260.jpg" />
+								
+								<p class="title-text">梵·戴克 香二嫩豆 实木平面系列 钻石龙凤檀 910*123*18*16</p>
+								<p class="price">
+									<span class="price-prev">￥998.00</span>
+									<span class="price-current">￥828.00</span>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="thumb-holder" target="_blank">
+								<img src="images/commodity/1461317069-197711034.jpg_260x260.jpg" />
+								
+								<p class="title-text">梵·戴克 刺猬紫檀 黄色 实木平面系列 庄园花梨 910*75*18*26</p>
+								<p class="price">
+									<span class="price-prev">￥1188.00</span>
+									<span class="price-current">￥989.00</span>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="thumb-holder" target="_blank">
+								<img src="images/commodity/1460600747-562147145.jpg_260x260.jpg" />
+								
+								<p class="title-text">梵·戴克 实木拼花 白蜡木 原驰蜡橡 450*450*15</p>
+								<p class="price">
+									<span class="price-prev">￥2488.00</span>
+									<span class="price-current">￥2188.00</span>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="thumb-holder" target="_blank">
+								<img src="images/commodity/1460600747-562147145.jpg_260x260.jpg" />
+								
+								<p class="title-text">梵·戴克 胡桃木  实木复合平面系列 黑胡桃 910*125*15/0.6*16</p>
+								<p class="price">
+									<span class="price-prev">￥618.00</span>
+									<span class="price-current">￥418.00</span>
+								</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--右侧内容-->
+			<div class="goods-con-right">
+				<!--相关推荐-->
+				<h3 class="h3-title">相关推荐</h3>
+				<ul class="recom-ullist">
+					<li>
+						<a href="javascript:;" target="_blank">
+							<img src="images/commodity/1489546228-1504101504.jpg_350x350.jpg" ></a> <b>￥1990.00</b>
+					</li>
+					<li>
+						<a href="javascript:;" target="_blank">
+							<img src="images/commodity/1489133273-1892364150.jpg_350x350.jpg" ></a> <b>￥5280.00</b>
+					</li>
+					<li>
+						<a href="javascript:;" target="_blank">
+							<img src="images/commodity/1489133907-1742293694.jpg_350x350.jpg" ></a>
+						<b>￥3290.00</b>
+					</li>
+					<li>
+						<a href="javascript:;" target="_blank">
+							<img src="images/commodity/1489134421-1734213789.jpg_350x350.jpg" ></a>
+						<b>￥4290.00</b>
+					</li>
+				</ul>
+				<!--商品详情 商品评论 售后服务-->
+				<div class="product-tabs-con">
+					<ul class="resp-tabs-list" id="J_tabList">
+						<li class="on">商品详情</li>
+						<li>商品评论(0)</li>
+						<li >售后服务</li>
+					</ul>
+					<div class="resp-tabs-container">
+						<!--商品详情-->		
+						<div class="product-desc  goods-contab">
+							<p>品牌：</p>
+							<div>
+								<img  src="images/commodity/1481684352-720074762.jpg" />
+								<img  src="images/commodity/1481684354-1894230687.jpg" />
+								<img  src="images/commodity/1481684355-360629091.jpg" />
+								<img  src="images/commodity/1481684356-1066821190.jpg" />
+								<img  src="images/commodity/1481684357-1248808898.jpg" />
+								<img  src="images/commodity/1481684358-36285471.jpg" />
+								<img  src="images/commodity/1481684359-272181336.jpg" />
+								<img  src="images/commodity/1481684360-259828227.jpg"  //>
+								<img  src="images/commodity/1481684361-977578484.jpg" />
+								<img  src="images/commodity/1481684362-1516300175.jpg" />
+								<img  src="images/commodity/1481684363-880864198.jpg" />
+								<img  src="images/commodity/1481684364-1086234084.jpg" />
+								<img  src="images/commodity/1481684364-2036089769.jpg" />
+								<img  src="images/commodity/1481684365-1581160595.jpg" />
+								<img  src="images/commodity/1481684366-213324937.jpg" />
+								<img  src="images/commodity/1481684367-690700003.jpg" />
+								<img src="images/commodity/info_01.jpg" />
+								<img src="images/commodity/info_02.jpg" />
+								<img src="images/commodity/info_03.jpg" />
+								<img src="images/commodity/info_04.jpg" />
+								<img src="images/commodity/info_05.jpg">
+							</div>
+						</div>
+						<!--商品评论-->		
+						<div  class="goods-contab">暂无评论！</div>
+						<!--售后服务-->		
+						<div class="goods-contab">森巢网售后服务</div>
+					</div>
+				</div>
+				<!--热门产品-->
+				<div class="recom-ullist mt10">
+					<h3 class="h3-title">热门产品</h3>
+					<ul>
+						<li>
+							<a href="javascript:;" target="_blank">
+								<img src="images/commodity/1434963230-1331431921.jpg_350x350.jpg" ></a>
+							<b>￥5980.00</b>
+						</li>
+						<li>
+							<a href="javascript:;" target="_blank">
+								<img src="images/commodity/1434961833-164724480.jpg_350x350.jpg" ></a>
+							<b>￥5980.00</b>
+						</li>
+						<li>
+							<a href="javascript:;" target="_blank">
+								<img src="images/commodity/1434961306-1542976569.jpg_350x350.jpg" ></a>
+							<b>￥5980.00</b>
+						</li>
+						<li>
+							<a href="javascript:;" target="_blank">
+								<img src="images/commodity/1434960623-1985026486.jpg_350x350.jpg" ></a>
+							<b>￥5980.00</b>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--底部-->
+	<footer>
+		<div class="footer maxWidth">
+			<div class="service-warp">
+				<div class="service-list">
+					<h4>购物指南</h4>
+					<ul>
+						<li>
+							<a href="#">会员注册</a>
+						</li>
+						<li>
+							<a href="#">如何订购</a>
+						</li>
+						<li>
+							<a href="#">订单处理</a>
+						</li>
+						<li>
+							<a href="#">森巢币</a>
+						</li>
+					</ul>
+				</div>
+				<div class="service-list">
+					<h4>售后保障</h4>
+					<ul>
+						<li>
+							<a href="#">退款说明</a>
+						</li>
+						<li>
+							<a href="#">返修/退换货</a>
+						</li>
+						<li>
+							<a href="#">正品保障</a>
+						</li>
+						<li>
+							<a href="#">投诉维权</a>
+						</li>
+					</ul>
+				</div>
+				<div class="service-list">
+					<h4>配送方式</h4>
+					<ul>
+						<li>
+							<a href="#">配送费收取标准</a>
+						</li>
+						<li>
+							<a href="#">如何配送</a>
+						</li>
+						<li>
+							<a href="#">如何自提</a>
+						</li>
+					</ul>
+				</div>
+				<div class="service-list">
+					<h4>支付方式</h4>
+					<ul>
+						<li>
+							<a href="#">到店支付</a>
+						</li>
+						<li>
+							<a href="#">公司转账</a>
+						</li>
+						<li>
+							<a href="#">货到付款</a>
+						</li>
+						<li>
+							<a href="#">在线支付</a>
+						</li>
+					</ul>
+				</div>
+				<div class="service-list">
+					<h4>商城声明</h4>
+					<ul>
+						<li>
+							<a href="#">注册协议</a>
+						</li>
+						<li>
+							<a href="#">免责声明</a>
+						</li>
+						<li>
+							<a href="#">隐身保护</a>
+						</li>
+					</ul>
+				</div>
+				<div class="service-list">
+					<h4>联系我们 Contact</h4>
+					<ul>
+						<li>
+							<span>400-9909-512</span>
+						</li>
+						<li class="contan-usewm">
+							<a href="#">
+								<img src="images/weixin.jpg"></a>
+							<a href="#">
+								<img src="images/app.jpg"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<ul class="footermu">
+				<li>
+					<a href="#" rel="nofollow">关于我们</a>
+				</li>
+				<li>
+					<a href="#" rel="nofollow">联系我们</a>
+				</li>
+				<li>
+					<a href="#" rel="nofollow">营销中心</a>
+				</li>
+				<li>
+					<a href="#" rel="nofollow">商务合作</a>
+				</li>
+				<li>
+					<a href="#" rel="nofollow"></a>
+				</li>
+			</ul>
+			<div class="copy-right">
+				Copyright © 甘肃森巢网络科技有限公司 2014-2034 版权所有 地址：兰州市城关区三森美居4楼森巢网020居家体验馆<br/>
+				垂询热线：4009909512 0931-8589499 E-mail：senchaowang@163.com 备案号：陇ICP备14001478号-2
+			</div>
+			<ul class="safety">
+				<li>
+					<a href="#">
+						<img src="images/aq1.jpg"></a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/aq2.jpg"></a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/aq3.jpg"></a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/aq4.jpg"></a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/aq5.jpg"></a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+</body>
+</html>
+<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/detail.js" type="text/javascript" charset="utf-8"></script>

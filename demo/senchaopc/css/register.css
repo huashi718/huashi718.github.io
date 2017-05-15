@@ -1,0 +1,78 @@
+.mauto {
+    width: 75pc;
+    margin: 0 auto;
+}
+.f18px {font-size: 18px;}
+.header{display: block;width: 100%;height: 90px;background: #fff;}
+.headercon{display: block;width:1200px;height: auto;overflow: hidden;margin: 0 auto;}
+.logo{display: block;float: left;height: auto;overflow: hidden;margin-top: 20px;}
+.logo-txt{display: block;float: left;font-family: 'Microsoft Yahei'; font-size: 24px;color: #999;margin-top: 33px;margin-left: 20px;}
+.lbody{display:block;width: 100%;height: 600px;background:url(../images/login_bg.jpg);}
+.lbody .center{display: block;position: relative; width: 980px;height: 600px;margin: 0 auto}
+
+.iconfont{font-family: iconfont!important;font-size:20px;    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: .2px;color: #fff;}
+
+.iconfont1{font-family: iconfont!important;font-size:20px;    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: .2px;color: #666;}
+
+.clearinput{display: block;display:none; width: 20px;height: 20px;position: absolute;right:5px;top: 10px;}
+
+.box3 .info ul li input.btn_gettelcode{display: block;width: 100px;margin: 0;padding: 0;border: 0; height: 30px;line-height: 30px;float: left;cursor: pointer;background: #d20000;color: #fff;}
+.box3 .info ul li input{font-family: 'Microsoft Yahei';}
+.box3{min-height:400px; margin:0 auto;}
+
+.box3 .biaoti{ width:100%;border-bottom:1px solid #d4d4d4; height:60px; line-height:60px;}
+
+.box3 .biaoti h1{ padding-left:25px;border-bottom:1px solid #000; width:140px;}
+
+.box3 .biaoti span { height:60px; width:220px; display:block;}
+
+.box3 .biaoti span h2{width: 85px;height: 30px;display: inline;line-height: 30px;background: #D20000;margin: 15px;text-align: center;font-size: 14px;border-radius: 4px; }
+
+.box3 .biaoti span h2 a{ color:#fff;}
+
+.box3 .info{ height:auto; width:100%; overflow:hidden;}
+.box3 .info .memberlogin_leftad{display:block;float:left;margin-top:20px; width: 700px; height:300px;background: #fff;}
+.box3 .info .memberlogin_leftad img{display: block;margin: 0 auto}
+.box3 .info ul{ width:400px;margin-top: 40px; float: right;margin-right: 50px;display: inline;}
+
+.box3 .info ul li{ height:46px; font-size:14px; font-family:微软雅黑; }
+
+.box3 .info ul li input{ height:28px; width:260px; margin-left:10px;padding-left: 5px;border:1px solid #ccc;font-size: 12px;color: #666;float: left;}
+.box3 .info ul li input:focus{border:1px solid #d20000;}
+.box3 .info ul li select{ height:30px; width:120px; margin-left:10px; }
+.box3 .info ul li .checktonyixiey{width: auto;height: auto;margin-top: 5px;}
+.box3 .info ul li .code{ width:80px;float: left;margin-right: 10px;}
+.box3 .info ul li .btn_sumita{display: block;height: 30px;text-align: center;background: #d20000;border-radius: 4px;color: #fff; line-height: 30px;width: 270px;float: left;margin-left: 10px;cursor: pointer;}
+.box3 .info ul li #btn_sumitaregnoty{display:none;}
+.box3 .info ul li h1{ float:right; font-size:18px; line-height:45px; height:45px; width:150px; background:#70b040; margin-right:60px;}
+
+.box3 .info ul li h1 a{ color:#fff;}
+.box3 .info ul li span .yzm{ width:110px; height:35px; display:inline;}
+
+.box3 .info ul li span h2{line-height:45px; font-size:16px;  margin:0 20px;}
+
+.box3 .info ul li span h2 a{color:#F00;}
+
+.box3 .submit h1{ background:#dc0000; width:200px; height:50px; line-height:45px; margin:13px auto;}
+
+.box3 .submit h1 a{ color:#fff;display: block;cursor: pointer;}
+.box3 .info ul li .span-reglogtitle{display: block;width:80px;font-size: 14px;float: left;padding: 0;margin: 0}
+/*用户注册-工程师-注册成功*/
+
+.box3 .prompt{height:auto; width:100%; overflow:hidden; padding:80px 0 40px ;}
+
+/*用户注册-工程师-注册成功-绑定成功*/
+
+.box3 .prompt ul{ width:520px; height:auto; margin:0px auto; color:#fe6102;}
+
+.box3 .prompt ul h1{ font-size:36px; line-height:80px; font-weight:bold;}
+
+.box3 .prompt ul p{ color:#555; font-size:18px;font-family:微软雅黑; line-height:30px;}
+
+.box3 .prompt ul h2{border:1px solid #d4d4d4; width:115px; height:40px; line-height:38px; margin:30px auto 0;}
+
+.box3 .prompt ul h2 a{color:#555;}

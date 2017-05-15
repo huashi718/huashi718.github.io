@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>用户登录-普通用户</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/clearCommodity.css"></head>
+
+<body>
+  <!--头部-->
+  <header>
+    <div class="header">
+      <div class="headercon">
+        <div class="logo">
+          <a href="/">
+            <img src="http://www.senchaowang.com/Public/static/scw/images/logo.png" />  
+          </a>
+        </div>
+        <div class="logo-txt">森巢购物车</div>
+      </div>
+    </div>
+  </header>
+  <section class="maxWith" style="overflow: hidden;">
+    <div class="checkout-tit">填写并核对订单信息</div>
+    <div class="checkout-steps">
+      <div class="step-tit">
+        <h3>收货人信息</h3>
+        <div class="extra-r">新增收货地址</div>
+      </div>
+      <div  class="consignee-content">
+        <ul id="consignee-list">
+          <li>
+            <div class="consignee-item item-selected" >大郎 京城</div>
+            <div class="addr-detail">
+              <span class="addr-name">大郎</span>
+              <span class="addr-info">北京 京城81号</span>
+              <span class="addr-tel">138****3838</span>
+            </div>
+          </li>
+          <li>
+            <div class="consignee-item " >金莲 京城</div>
+            <div class="addr-detail">
+              <span class="addr-name">金莲</span>
+              <span class="addr-info">北京 京城81号</span>
+              <span class="addr-tel">138****3838</span>
+            </div>
+          </li>
+           <li>
+            <div class="consignee-item" >西门大官人 京城</div>
+            <div class="addr-detail">
+              <span class="addr-name">西门大官人</span>
+              <span class="addr-info">北京 京城82号</span>
+              <span class="addr-tel">138****3838</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="addr-switch switch-on" id="consigneeItemAllClick" >
+        <span>更多地址</span>
+        <b></b>
+      </div>
+      <h3 class="step-tit">支付方式</h3>
+      <ul class="payment-list">
+        <li class="item-selected">货到付款</li>
+        <li>白条支付</li>
+        <li>微信支付</li>
+        <li>货到付款</li>
+        <li>京东支付</li>
+        <li>支付宝支付</li>
+      </ul>
+      <h3 class="step-tit">送货清单</h3>
+      <img src="images/cart/shopping-list.jpg" class="shopping-list-picture"></div>
+    <div class="trade-foot-detail-com">
+      <div class="fc-price-info">
+        <span class="price-tit">应付总额：</span>
+        <span class="price-num" id="sumPayPriceId">￥1699.00</span>
+      </div>
+      <div class="fc-baitiao-info" style="display: none;">
+        <span>
+          白条支付： <em>30天免息</em>
+          （不使用优惠） <i class="bt-edit-icon" onclick="javascript:btDetail();" clstag="pageclick|keycount|PaymentLead__2016030411|5"></i>
+        </span>
+      </div>
+      <div class="fc-consignee-info">
+        <span class="mr20" id="sendAddr">寄送至： 京城 81号</span>
+        <span id="sendMobile">收货人：大郎 138****3838</span>
+      </div>
+    </div>
+    <div class="submit-order">提交订单</div>
+    <!--新增地址弹层-->
+    <div id="J_addArddes">
+      <div class="ui-mask"></div>
+      <div class="ui-dialog">
+        <div class="ui-dialog-title">
+          新增收货人信息
+          <img src="images/cart/dialog.png" class="ui-dialog-close"></div>
+        <div class="form" id="consignee-form" >
+          <div class="item" id="name_div">
+            <span class="label">
+              <span style="color:red">*</span>
+              &nbsp;收货人：
+            </span>
+            <input type="text" class="itxt" id="consignee_name" name="consigneeParam.name" maxlength="20" value=""></div>
+          <div class="item" id="area_div">
+            <span class="label">
+              <span style="color:red">*</span>
+              &nbsp;所在地区：
+            </span>
+            <div class="fl">
+              <!-- 新版地址选择 Start -->
+              <div id="jd_area" class="ui-area-wrap">
+                <!--展示内容主体-->
+                <div class="ui-area-text-wrap">
+                  <!--显示被选中的地区-->
+                  <div class="ui-area-text">--请选择--</div>
+                  <!--小箭头-->
+                  <b></b>
+                </div>
+                <!--弹出内容主体-->
+                <div class="ui-area-content-wrap">
+                  <!--省市区选择标签-->
+                  <div class="ui-area-tab">
+                    <a class="ui-switchable-item ui-area-current" data-id="-1" title="请选择" style="max-width: 395px;"> <em>请选择</em> <i></i>
+                    </a>
+                  </div>
+                  <!--地区内容-->
+                  <div class="ui-area-content">
+                    <div style="" class="ui-switchable-panel ui-switchable-panel-selected" data-index="0">
+                      <ul class="ui-area-content-list">
+                        <li>
+                          <a data-id="1" href="javascript:void(0)">北京</a>
+                        </li>
+                        <li>
+                          <a data-id="2" href="javascript:void(0)">上海</a>
+                        </li>
+                        <li>
+                          <a data-id="3" href="javascript:void(0)">天津</a>
+                        </li>
+                        <li>
+                          <a data-id="4" href="javascript:void(0)">重庆</a>
+                        </li>
+                        <li>
+                          <a data-id="5" href="javascript:void(0)">河北</a>
+                        </li>
+                        <li>
+                          <a data-id="6" href="javascript:void(0)">山西</a>
+                        </li>
+                        <li>
+                          <a data-id="7" href="javascript:void(0)">河南</a>
+                        </li>
+                        <li>
+                          <a data-id="8" href="javascript:void(0)">辽宁</a>
+                        </li>
+                        <li>
+                          <a data-id="9" href="javascript:void(0)">吉林</a>
+                        </li>
+                        <li>
+                          <a data-id="10" href="javascript:void(0)">黑龙江</a>
+                        </li>
+                        <li>
+                          <a data-id="11" href="javascript:void(0)">内蒙古</a>
+                        </li>
+                        <li>
+                          <a data-id="12" href="javascript:void(0)">江苏</a>
+                        </li>
+                        <li>
+                          <a data-id="13" href="javascript:void(0)">山东</a>
+                        </li>
+                        <li>
+                          <a data-id="14" href="javascript:void(0)">安徽</a>
+                        </li>
+                        <li>
+                          <a data-id="15" href="javascript:void(0)">浙江</a>
+                        </li>
+                        <li>
+                          <a data-id="16" href="javascript:void(0)">福建</a>
+                        </li>
+                        <li>
+                          <a data-id="17" href="javascript:void(0)">湖北</a>
+                        </li>
+                        <li>
+                          <a data-id="18" href="javascript:void(0)">湖南</a>
+                        </li>
+                        <li>
+                          <a data-id="19" href="javascript:void(0)">广东</a>
+                        </li>
+                        <li>
+                          <a data-id="20" href="javascript:void(0)">广西</a>
+                        </li>
+                        <li>
+                          <a data-id="21" href="javascript:void(0)">江西</a>
+                        </li>
+                        <li>
+                          <a data-id="22" href="javascript:void(0)">四川</a>
+                        </li>
+                        <li>
+                          <a data-id="23" href="javascript:void(0)">海南</a>
+                        </li>
+                        <li>
+                          <a data-id="24" href="javascript:void(0)">贵州</a>
+                        </li>
+                        <li>
+                          <a data-id="25" href="javascript:void(0)">云南</a>
+                        </li>
+                        <li>
+                          <a data-id="26" href="javascript:void(0)">西藏</a>
+                        </li>
+                        <li>
+                          <a data-id="27" href="javascript:void(0)">陕西</a>
+                        </li>
+                        <li>
+                          <a data-id="28" href="javascript:void(0)">甘肃</a>
+                        </li>
+                        <li>
+                          <a data-id="29" href="javascript:void(0)">青海</a>
+                        </li>
+                        <li>
+                          <a data-id="30" href="javascript:void(0)">宁夏</a>
+                        </li>
+                        <li>
+                          <a data-id="31" href="javascript:void(0)">新疆</a>
+                        </li>
+                        <li>
+                          <a data-id="52993" href="javascript:void(0)">港澳</a>
+                        </li>
+                        <li>
+                          <a data-id="32" href="javascript:void(0)">台湾</a>
+                        </li>
+                        <li>
+                          <a data-id="84" href="javascript:void(0)">钓鱼岛</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div style="display: none;" class="ui-switchable-panel" data-index="1">
+                      <ul class="ui-area-content-list"></ul>
+                    </div>
+                  </div>
+                  <!--关闭按钮-->
+                  <div class="ui-area-close"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <span class="label" id="address_div">
+              <span style="color:red">*</span>
+              &nbsp;详细地址：
+            </span>
+            <input type="text" class="itxt itxt02" id="consignee_address"  maxlength="50" value="" ></div>
+          <div class="item" id="call_div">
+            <span class="label">
+              <span style="color:red">*</span>
+              &nbsp;手机号码：
+            </span>
+            <input type="text" class="itxt " id="consignee_mobile"  maxlength="11" value="">
+            <span class="label" style="float:none;padding-left:10px;">固定电话：</span>
+            <input type="text" class="itxt " id="consignee_phone" maxlength="20" value=""></div>
+          <div class="item" id="email_div">
+            <span class="label">邮箱：</span>
+            <div class="fl">
+              <input type="text" class="itxt" id="consignee_email"  maxlength="50"  value="">
+              <span class="error-msg" id="email_div_error"></span>
+              <div class="ftx-03">用来接收订单提醒邮件，便于您及时了解订单状态</div>
+            </div>
+          </div>
+          <div class="item" id="alias_div">
+            <span class="label">地址别名：</span>
+            <div class="fl">
+              <input type="hidden" id="consignee_addressName_old" maxlength="20" value="">
+              <input type="text" class="itxt" id="consignee_addressName"  maxlength="20" value="">
+              <span class="error-msg" id="alias_div_error"></span>
+              <span class="consignee-tag-info">建议填写常用名称</span>
+            </div>
+            <div class="consignee-tag fl">
+              <span onclick="javascript:setEditAddressAilas('home');" id="home">家里</span>
+              <span onclick="javascript:setEditAddressAilas('parentHome');" id="parentHome">父母家</span>
+              <span onclick="javascript:setEditAddressAilas('company');" id="company">公司</span>
+            </div>
+          </div>
+          <div id="saveConsigneeTitleDiv">保存收货人信息</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+<!--底部-->
+  <footer>
+    <div class="footer maxWidth">
+      <div class="service-warp">
+        <div class="service-list">
+          <h4>购物指南</h4>
+          <ul>
+            <li>
+              <a href="#">会员注册</a>
+            </li>
+            <li>
+              <a href="#">如何订购</a>
+            </li>
+            <li>
+              <a href="#">订单处理</a>
+            </li>
+            <li>
+              <a href="#">森巢币</a>
+            </li>
+          </ul>
+        </div>
+        <div class="service-list">
+          <h4>售后保障</h4>
+          <ul>
+            <li>
+              <a href="#">退款说明</a>
+            </li>
+            <li>
+              <a href="#">返修/退换货</a>
+            </li>
+            <li>
+              <a href="#">正品保障</a>
+            </li>
+            <li>
+              <a href="#">投诉维权</a>
+            </li>
+          </ul>
+        </div>
+        <div class="service-list">
+          <h4>配送方式</h4>
+          <ul>
+            <li>
+              <a href="#">配送费收取标准</a>
+            </li>
+            <li>
+              <a href="#">如何配送</a>
+            </li>
+            <li>
+              <a href="#">如何自提</a>
+            </li>
+          </ul>
+        </div>
+        <div class="service-list">
+          <h4>支付方式</h4>
+          <ul>
+            <li>
+              <a href="#">到店支付</a>
+            </li>
+            <li>
+              <a href="#">公司转账</a>
+            </li>
+            <li>
+              <a href="#">货到付款</a>
+            </li>
+            <li>
+              <a href="#">在线支付</a>
+            </li>
+          </ul>
+        </div>
+        <div class="service-list">
+          <h4>商城声明</h4>
+          <ul>
+            <li>
+              <a href="#">注册协议</a>
+            </li>
+            <li>
+              <a href="#">免责声明</a>
+            </li>
+            <li>
+              <a href="#">隐身保护</a>
+            </li>
+          </ul>
+        </div>
+        <div class="service-list">
+          <h4>联系我们 Contact</h4>
+          <ul>
+            <li>
+              <span>400-9909-512</span>
+            </li>
+            <li class="contan-usewm">
+              <a href="#">
+                <img src="images/weixin.jpg"></a>
+              <a href="#">
+                <img src="images/app.jpg"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <ul class="footermu">
+        <li>
+          <a href="#" rel="nofollow">关于我们</a>
+        </li>
+        <li>
+          <a href="#" rel="nofollow">联系我们</a>
+        </li>
+        <li>
+          <a href="#" rel="nofollow">营销中心</a>
+        </li>
+        <li>
+          <a href="#" rel="nofollow">商务合作</a>
+        </li>
+        <li>
+          <a href="#" rel="nofollow"></a>
+        </li>
+      </ul>
+      <div class="copy-right">
+        Copyright © 甘肃森巢网络科技有限公司 2014-2034 版权所有 地址：兰州市城关区三森美居4楼森巢网020居家体验馆<br/>
+        垂询热线：4009909512 0931-8589499 E-mail：senchaowang@163.com 备案号：陇ICP备14001478号-2
+      </div>
+      <ul class="safety">
+        <li>
+          <a href="#">
+            <img src="images/aq1.jpg"></a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/aq2.jpg"></a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/aq3.jpg"></a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/aq4.jpg"></a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/aq5.jpg"></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

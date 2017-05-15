@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>用户登录-普通用户</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+
+<body>
+  <!--头部-->
+  <header>
+    <div class="header">
+      <div class="headercon">
+        <div class="logo">
+          <a href="/">
+            <img src="images/logoBig.png" />
+          </a>
+        </div>
+        <div class="logo-txt">欢迎登录</div>
+      </div>
+    </div>
+  </header>
+  <!--用户登录的主体-->
+  <section>
+    <div class="lbody">
+      <div class="center">
+        <div class="loginmain">
+          <form id="memberform2" method="post">
+            <input type="hidden" name="gotourl" value="/home/cart/accadoninfo" />  
+            <div class="message"> <i class="iconfont" title="会员名">&#xf0153;</i>
+              <span id="msgcon"></span>
+            </div>
+            <h2 class="title">账户登录</h2>
+            <div class="inputdiv">
+              <label for="username2"> <i class="iconfont" title="会员名">&#xf012d;</i>
+              </label>
+              <input id="username2" name="member[username]" tabindex="1" type="text" autocomplete="off" placeholder="已验证手机号码！" />  
+              <a href="javascript:void();" onclick="clearinput(this);" class="clearinput">
+                <i class="iconfont1">&#xf0155;</i>
+              </a>
+            </div>
+            <div class="inputdiv">
+              <label for="password2">
+                <i class="iconfont" title="密码">&#xf00c9;</i>
+              </label>
+              <input id="password2" name="member[password]" tabindex="2" type="password" autocomplete="off" placeholder="密码" value="" />  
+              <a href="javascript:void();" onclick="clearinput(this);" class="clearinput">
+                <i class="iconfont1">&#xf0155;</i>
+              </a>
+            </div>
+            <div class="text-area">
+              <a href="/member/index/findpwd.html" class="left" target="_blank">忘记登录密码</a>
+              <a href="/member/index/register.html" class="right">免费注册</a>
+            </div>
+            <button type="button" id="btn_sumita2" onclick="btnsubmit2();" class="submit">登　录</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--底部-->
+  <footer>
+    <div class="footer maxWidth">
+      <div class="service-warp">
+        <div class="service-list">
+          <h4>购物指南</h4>
+          <ul>
+            <li>
+              <a href="#">会员注册</a>
+            </li>
+            <li>
+              <a href="#">如何订购</a>
+            </li>
+            <li>
+              <a href="#">订单处理</a>
+            </li>
+            <li>
+              <a href="#">森巢币</a>
+            </li>
+          </ul>
+        </div>
+        <div class="service-list">
+          <h4>售后保障</h4>
+          <ul>
+            <li>
+              <a href="#">退款说明</a>
+            </li>
+            <li>
+              <a href="#">返修/退换货</a>
+            </li>
+            <li>
+              <a href="#">正品保障</a>
+            </li>
+            <li>
+              <a href="#">投诉维权</a>
+            </li>
+          </ul>
+        </div>
+        <div class="service-list">
+          <h4>配送方式</h4>
+          <ul>
+            <li>
+              <a href="#">配送费收取标准</a>
+            </li>
+            <li>
+              <a href="#">如何配送</a>
+            </li>
+            <li>
+              <a href="#">如何自提</a>
+            </li>
+          </ul>
+        </div>
+        <div class="service-list">
+          <h4>支付方式</h4>
+          <ul>
+            <li>
+              <a href="#">到店支付</a>
+            </li>
+            <li>
+              <a href="#">公司转账</a>
+            </li>
+            <li>
+              <a href="#">货到付款</a>
+            </li>
+            <li>
+              <a href="#">在线支付</a>
+            </li>
+          </ul>
+        </div>
+        <div class="service-list">
+          <h4>商城声明</h4>
+          <ul>
+            <li>
+              <a href="#">注册协议</a>
+            </li>
+            <li>
+              <a href="#">免责声明</a>
+            </li>
+            <li>
+              <a href="#">隐身保护</a>
+            </li>
+          </ul>
+        </div>
+        <div class="service-list">
+          <h4>联系我们 Contact</h4>
+          <ul>
+            <li>
+              <span>400-9909-512</span>
+            </li>
+            <li class="contan-usewm">
+              <a href="#">
+                <img src="images/weixin.jpg"></a>
+              <a href="#">
+                <img src="images/app.jpg"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <ul class="footermu">
+        <li>
+          <a href="#" rel="nofollow">关于我们</a>
+        </li>
+        <li>
+          <a href="#" rel="nofollow">联系我们</a>
+        </li>
+        <li>
+          <a href="#" rel="nofollow">营销中心</a>
+        </li>
+        <li>
+          <a href="#" rel="nofollow">商务合作</a>
+        </li>
+        <li>
+          <a href="#" rel="nofollow"></a>
+        </li>
+      </ul>
+      <div class="copy-right">
+        Copyright © 甘肃森巢网络科技有限公司 2014-2034 版权所有 地址：兰州市城关区三森美居4楼森巢网020居家体验馆<br/>
+        垂询热线：4009909512 0931-8589499 E-mail：senchaowang@163.com 备案号：陇ICP备14001478号-2
+      </div>
+      <ul class="safety">
+        <li>
+          <a href="#">
+            <img src="images/aq1.jpg"></a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/aq2.jpg"></a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/aq3.jpg"></a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/aq4.jpg"></a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/aq5.jpg"></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

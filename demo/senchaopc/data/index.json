@@ -1,0 +1,25 @@
+{
+	"code":1,
+	"desc":"",
+	"data":{
+			"city":[
+				{"cityname":"兰州市"},
+				{"cityname":"嘉峪关市"},
+				{"cityname":"金昌市"},
+				{"cityname":"白银市"},
+				{"cityname":"天水市"},
+				{"cityname":"武威市"},
+				{"cityname":"张掖市"},
+				{"cityname":"平凉市"},
+				{"cityname":"酒泉市"},
+				{"cityname":"庆阳市"},
+				{"cityname":"定西市"},
+				{"cityname":"陇南市"},
+				{"cityname":"123临夏回"},
+				{"cityname":"甘南藏族自治州"}
+			],
+			"carousel":"images/carousel/1488011550-761180197.jpg,images/carousel/1489545300-1303599141.jpg,images/carousel/1488350956-1820682938.jpg,images/carousel/1488248500-391614477.jpg,images/carousel/1488247712-220890632.jpg"
+		}
+}
+
+	

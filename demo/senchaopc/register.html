@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>用户注册-普通用户</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/register.css">
+</head>
+
+<body>
+  <!--头部-->
+  <header>
+    <div class="header">
+      <div class="headercon">
+        <div class="logo">
+          <a href="/">
+            <img src="http://www.senchaowang.com/Public/static/scw/images/logo.png" />    
+          </a>
+        </div>
+        <div class="logo-txt">欢迎注册</div>
+      </div>
+    </div>
+  </header>
+  <!--用户注册-->
+  <section>
+    <div class="blank20"></div>
+    <div class="centerbody mauto">
+      <div class="box3 boradius5">
+        <div class="biaoti">
+          <h1 class="f24px yahei fl">免费注册</h1>
+          <span class="fr f18px">
+            已有账号？
+              <h2 class=" boradius5 fr tac f16px yahei">
+                <a href="login.html">立即登录</a>
+              </h2>
+            </span>
+          </div>
+          <div class="info">
+            <div class="memberlogin_leftad">
+              <a href="http://www.senchaowang.com/home/goods/plist/cid/34.html">
+                <img src="http://m.senchaowang.com/Public/upload/2016-05/1463710751-865097234.jpg" title="森巢家装节" alt="森巢家装节"  />    
+              </a>
+            </div>
+            <form id="memberform">
+              <input type="hidden" name="gotourl" value="" />    
+              <ul>
+                <span id="stuname"></span>
+                <br />    
+                <li>
+                  <span class="span-reglogtitle">账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号:</span>
+                  <input id="username" name="member[username]" type="text" value="请输入您的手机号码！" onFocus="if(this.value=='请输入您的手机号码！'){this.value='';}"  onBlur="if(this.value==''){this.value='请输入您的手机号码！';}"/>    
+                </li>
+                <li>
+                  <span class="span-reglogtitle">短信验证码:</span>
+                  <input id="telcode" class="code" name="member[telcode]" type="text" value=""/>    
+                  <input type="button" id="btn_getcode" class="btn_gettelcode" value="获取短信验证码" />    
+                </li>
+
+                <li>
+                  <span class="span-reglogtitle">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</span>
+                  <input id="password" name="member[password]" type="password" value="" />    
+                </li>
+                <li>
+                  <span class="span-reglogtitle">确认密码:</span>
+                  <input id="cfpasswd" type="password" value=""/>    
+                </li>
+
+                <li>
+                  <span class="span-reglogtitle">&nbsp;</span>
+                  <input type="checkbox" onclick="btntongyireg()" class="checktonyixiey" id="chktongyixy" value="1" checked />    
+                  &nbsp;&nbsp;同意
+                  <a href="/home/news/content/id/29.html" target="_blank" style="color:#d20000">《森巢服务协议》</a>
+                </li>
+                <li>
+                  <span class="span-reglogtitle">&nbsp;</span>
+                  <a class="btn_sumita" id="btn_sumitareg" onclick="btnsubmit()">同意协议并注册</a>
+                  <a class="btn_sumita" style="background:#ddd;color:#666" id="btn_sumitaregnoty">同意协议并注册</a>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+      
+  </section>
+  <!--底部-->
+  <footer>
+    <div class="footer maxWidth">
+      <div class="service-warp">
+        <div class="service-list">
+          <h4>购物指南</h4>
+          <ul>
+            <li>
+              <a href="#">会员注册</a>
+            </li>
+            <li>
+              <a href="#">如何订购</a>
+            </li>
+            <li>
+              <a href="#">订单处理</a>
+            </li>
+            <li>
+              <a href="#">森巢币</a>
+            </li>
+          </ul>
+        </div>
+        <div class="service-list">
+          <h4>售后保障</h4>
+          <ul>
+            <li>
+              <a href="#">退款说明</a>
+            </li>
+            <li>
+              <a href="#">返修/退换货</a>
+            </li>
+            <li>
+              <a href="#">正品保障</a>
+            </li>
+            <li>
+              <a href="#">投诉维权</a>
+            </li>
+          </ul>
+        </div>
+        <div class="service-list">
+          <h4>配送方式</h4>
+          <ul>
+            <li>
+              <a href="#">配送费收取标准</a>
+            </li>
+            <li>
+              <a href="#">如何配送</a>
+            </li>
+            <li>
+              <a href="#">如何自提</a>
+            </li>
+          </ul>
+        </div>
+        <div class="service-list">
+          <h4>支付方式</h4>
+          <ul>
+            <li>
+              <a href="#">到店支付</a>
+            </li>
+            <li>
+              <a href="#">公司转账</a>
+            </li>
+            <li>
+              <a href="#">货到付款</a>
+            </li>
+            <li>
+              <a href="#">在线支付</a>
+            </li>
+          </ul>
+        </div>
+        <div class="service-list">
+          <h4>商城声明</h4>
+          <ul>
+            <li>
+              <a href="#">注册协议</a>
+            </li>
+            <li>
+              <a href="#">免责声明</a>
+            </li>
+            <li>
+              <a href="#">隐身保护</a>
+            </li>
+          </ul>
+        </div>
+        <div class="service-list">
+          <h4>联系我们 Contact</h4>
+          <ul>
+            <li>
+              <span>400-9909-512</span>
+            </li>
+            <li class="contan-usewm">
+              <a href="#">
+                <img src="images/weixin.jpg"></a>
+              <a href="#">
+                <img src="images/app.jpg"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <ul class="footermu">
+        <li>
+          <a href="#" rel="nofollow">关于我们</a>
+        </li>
+        <li>
+          <a href="#" rel="nofollow">联系我们</a>
+        </li>
+        <li>
+          <a href="#" rel="nofollow">营销中心</a>
+        </li>
+        <li>
+          <a href="#" rel="nofollow">商务合作</a>
+        </li>
+        <li>
+          <a href="#" rel="nofollow"></a>
+        </li>
+      </ul>
+      <div class="copy-right">
+        Copyright © 甘肃森巢网络科技有限公司 2014-2034 版权所有 地址：兰州市城关区三森美居4楼森巢网020居家体验馆<br/>
+        垂询热线：4009909512 0931-8589499 E-mail：senchaowang@163.com 备案号：陇ICP备14001478号-2
+      </div>
+      <ul class="safety">
+        <li>
+          <a href="#">
+            <img src="images/aq1.jpg"></a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/aq2.jpg"></a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/aq3.jpg"></a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/aq4.jpg"></a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/aq5.jpg"></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
