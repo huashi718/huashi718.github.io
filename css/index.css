@@ -6,6 +6,14 @@ a:hover{
 	opacity: 0.6;
 	color: red;
 }
+/*播放器*/
+#audio{
+	position: absolute;
+	top:10px;
+	right: 22%;
+	width:25%;
+	z-index: 100;
+}
 /*导航栏*/
 .navbar{
 	background: #fff;
@@ -107,18 +115,20 @@ a:hover{
 .little_demo{
 	width: 46%;
 	float: left;
-	margin-right: 2%;
+	margin-right: 3%;
 }
 .little_demo>img{
 	width: 100px;
 	height:100px;
-	margin-bottom: 5px;
+	border:2px solid #CCCCCC;
+	margin-bottom: 8px;
 	border-radius:100% ;
 	transition: all 0.2s linear;
 }
 .little_demo>img:hover{
 	transform:scale(1.1);
 }
+
 /*demo放大*/
 /*.mylabel-content>a:hover .mylabel-content>a>div>img{
 	animation:move-big  5s linear  0s 1;

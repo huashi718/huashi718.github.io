@@ -12,7 +12,9 @@
 		<link rel="stylesheet" href="css/index.css" />
 	</head>
 	<body>
-		<!--响应式导航栏-->
+		<!--音乐播放-->
+		<audio src="audio/凉凉.mp3"  id="audio" controls="controls"></audio>
+		<!--响应式导航-->
 		<nav class="navbar navbar-default" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
@@ -93,6 +95,7 @@
 								<img src="img/2017-05-15_231327.png" alt="" />
 							</div>
 						</a>
+						<!--聊天-->
 						<a href="http:/huashi718.github.io/demo/chart/">
 							<div class="little_demo">
 								<img src="img/2017-05-15_232047.png" alt="" />
@@ -103,8 +106,20 @@
 								<img src="img/2017-05-13_222023.png" alt="" />
 							</div>
 						</a>
+						<!---->
+						<a href="http:/huashi718.github.io/demo/">
+							<div class="little_demo">
+								<img src="img/2017-05-17_082309.png" alt="" />
+							</div>
+						</a>
+						<!---->
+						<a href="http:/huashi718.github.io/demo/">
+							<div class="little_demo">
+								<img src="img/2017-05-17_082131.png" alt="" />
+							</div>
+						</a>
 					</div>
-					<!--<div class="mymanifesto">
+					<!--<div >
 						<p>我相信这是一个通过百倍努力就能自由遨游的时代，而互联网行业就是
 						我的星辰大海</p>
 					</div>-->
@@ -256,7 +271,7 @@
 						<img src="img/psb.jpg"/>
 						<div class="fr word">
 							<span>花事</span><br />
-							<span>性别：女  &nbsp;年龄：26岁</span><br />
+							<span>性别：女  &nbsp;</span><br />
 							<span>现居：北京</span>
 						</div>
 					</div>
@@ -274,7 +289,10 @@
 		</div>
 	</body>
 </html>
-
+<script type="text/javascript">
+	var player = document.getElementById('audio');
+	player.play();
+</script>
 
 
 		

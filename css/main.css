@@ -6,6 +6,13 @@ a:hover{
 	opacity: 0.6;
 	color: red;
 }
+/*播放器*/
+#audio{
+	position: absolute;
+	top:10px;
+	right: 300px;
+	z-index: 100;
+}
 /*导航栏*/
 .navbar{
 	background: #fff;
